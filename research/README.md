@@ -2,9 +2,18 @@
 
 This directory is the public research notebook for KARADAVI.
 
-Research entries should capture a question, hypothesis, method, observations, limitations, and next steps.
+## Current questions
 
-## Suggested format
+| ID | Question | Status |
+| --- | --- | --- |
+| 001 | Is trust better represented as structured evidence than a single score? | hypothesis |
+| 002 | Can authority be modeled as contextual standing? | hypothesis |
+| 003 | How should uncertainty propagate through derived state? | hypothesis |
+| 004 | Should entity resolution preserve ambiguity? | hypothesis |
+
+## Research format
+
+Each entry should capture:
 
 ```text
 Question
@@ -18,4 +27,13 @@ Next experiment
 
 Research here may be exploratory and incomplete. The purpose is to make the reasoning behind architectural decisions visible and testable.
 
-Experiments that require private datasets, internal services, or unreleased implementation should remain outside this repository.
+## Standards for public research
+
+- State assumptions explicitly.
+- Separate observations from interpretation.
+- Preserve limitations and failed approaches.
+- Prefer synthetic or appropriately public inputs.
+- Make experiments reproducible where practical.
+- Label hypotheses as hypotheses until evidence supports stronger language.
+
+Experiments that require private datasets, internal services, or unreleased implementation remain outside this repository.
