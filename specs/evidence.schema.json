@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/evidence.schema.json",
+  "title": "KARADAVI Evidence",
+  "description": "An artifact or observation used to support, weaken, or contextualize a claim.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "supports"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "kind": { "enum": ["observation", "document", "record", "measurement", "event", "statement", "other"] },
+    "supports": { "type": "array", "items": { "type": "string" } },
+    "weakens": { "type": "array", "items": { "type": "string" } },
+    "content_ref": { "type": "string" },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "context": { "type": "object", "additionalProperties": true }
+  }
+}
