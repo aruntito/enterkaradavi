@@ -1,315 +1,253 @@
 <div align="center">
 
-<img src="assets/karadavi-system.svg" alt="KARADAVI — machine trust, perception, semantic authority" width="100%" />
+<img src="assets/karadavi-brand-hero.svg" alt="KARADAVI — The Knowledge Forest" width="100%" />
 
 <br />
 
-<a href="https://www.karadavi.com"><strong>ENTER KARADAVI.COM ↗</strong></a>
-&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
-<a href="research/"><strong>RESEARCH</strong></a>
-&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
-<a href="specs/"><strong>SPECIFICATIONS</strong></a>
-
-<br /><br />
-
-<table>
-<tr>
-<td><strong>01</strong><br /><sub>ACTIVE RESEARCH</sub></td>
-<td><strong>02</strong><br /><sub>SPECIFICATION v0.1</sub></td>
-<td><strong>03</strong><br /><sub>PUBLIC SURFACE</sub></td>
-<td><strong>04</strong><br /><sub>MIT LICENSE</sub></td>
-</tr>
-</table>
+[**ENTER KARADAVI.COM →**](https://www.karadavi.com)&nbsp;&nbsp;&nbsp;&nbsp;[**EXPLORE THE RESEARCH →**](https://github.com/aruntito/enterkaradavi)
 
 </div>
 
 ---
 
-## MACHINE TRUST · PERCEPTION · SEMANTIC AUTHORITY
+## THE KNOWLEDGE FOREST
 
-KARADAVI is a research and specification project for systems that need to understand **what they observe, where it came from, what supports it, and how it should be treated.**
+KARADAVI is a unified editorial atlas for understanding the people, companies, technologies, sciences, histories, ideas, and places that shape our world — and the connections between them.
 
-> **The live system is the experience. This repository is the reasoning behind it.**
+This repository is the **public technical and research layer** behind that experience.
 
----
+It explores how knowledge can remain **structured, connected, verifiable, and understandable to both people and machines.**
 
-## THE SYSTEM
-
-<table>
-<tr>
-<td width="25%" align="center">
-
-### <span style="color:#00D9FF">01</span>
-
-**PERCEIVE**
-
-Understand what is present.
-
-</td>
-<td width="25%" align="center">
-
-### <span style="color:#8B7CFF">02</span>
-
-**IDENTIFY**
-
-Resolve entities and meaning.
-
-</td>
-<td width="25%" align="center">
-
-### <span style="color:#FF4FD8">03</span>
-
-**EVALUATE**
-
-Inspect evidence, provenance and authority.
-
-</td>
-<td width="25%" align="center">
-
-### <span style="color:#FFB84D">04</span>
-
-**EXPLAIN**
-
-Return machine-readable reasoning.
-
-</td>
-</tr>
-</table>
+> **Every page is a starting point. Every connection leads somewhere.**
 
 <br />
-
-```text
-DIGITAL WORLD
-      ↓
-PERCEPTION → IDENTIFICATION → SEMANTICS
-                                      ↓
-                         EVIDENCE → PROVENANCE
-                                      ↓
-                              AUTHORITY CONTEXT
-                                      ↓
-                                UNCERTAINTY
-                                      ↓
-                                TRUST SIGNAL
-                                      ↓
-                         MACHINE-READABLE STATE
-```
-
-**Trust is not a magic number. It is a result of inspectable context.**
-
-[Read the architecture →](docs/architecture.md)
-
----
-
-## WHY KARADAVI
-
-Machines can retrieve enormous amounts of information.
-
-Retrieval is not the hard part.
-
-The hard part begins after retrieval:
-
-<table>
-<tr>
-<td width="50%">
-
-**IDENTITY**
-
-What exactly is this entity?
-
-**CONTEXT**
-
-What does it mean here?
-
-**EVIDENCE**
-
-What supports the claim?
-
-</td>
-<td width="50%">
-
-**PROVENANCE**
-
-Where did the information come from?
-
-**AUTHORITY**
-
-Which source has standing in this context?
-
-**UNCERTAINTY**
-
-What remains unresolved?
-
-</td>
-</tr>
-</table>
-
-KARADAVI explores infrastructure that keeps those questions **visible, structured and machine-readable** instead of collapsing everything into one opaque confidence score.
-
----
-
-## PUBLIC MODEL
 
 <div align="center">
 
-| ENTITY | CLAIM | EVIDENCE | PROVENANCE | AUTHORITY | UNCERTAINTY | TRUST |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ◉ | → | ◆ | → | ◇ | → | ● |
+### PEOPLE · COMPANIES · TECHNOLOGY · SCIENCE · HISTORY · IDEAS · PLACES
 
 </div>
 
+---
+
+## WHY KARADAVI EXISTS
+
+We have frictionless access to enormous amounts of information, yet much of it arrives as disconnected fragments.
+
+Search results answer a query.
+
+Feeds optimize for the next reaction.
+
+Articles often stand alone.
+
+KARADAVI takes a different approach: **start with the thing itself, establish its canonical identity, then preserve the relationships that give it meaning.**
+
+That means a person can lead to a company. A company can lead to a technology. A technology can lead to a scientific breakthrough. A breakthrough can lead to a historical consequence.
+
+The goal is not simply to collect more information.
+
+**The goal is to preserve context.**
+
+---
+
+## HOW THE KNOWLEDGE FOREST WORKS
+
+<img src="assets/karadavi-architecture.svg" alt="KARADAVI architecture — entity, context, evidence and machine-readable knowledge" width="100%" />
+
+### 01 / CANONICAL REALITY
+
+Every person, company, technology, place, and concept should exist as a coherent entity rather than as a pile of disconnected pages.
+
+### 02 / BIDIRECTIONAL CONTEXT
+
+Connections work in both directions. Follow a founder to a company, a company to a technology, or a technology back through the people and ideas that shaped it.
+
+### 03 / VERIFIABLE EVIDENCE
+
+Claims should retain the evidence and provenance needed to understand where they came from and how they were formed.
+
+### 04 / MACHINE-READABLE KNOWLEDGE
+
+The same structured model that helps a human follow a trail can also give software a clearer representation of the world.
+
+**[Explore the architecture →](docs/architecture.md)**
+
+---
+
+## THE PUBLIC MODEL
+
+KARADAVI keeps knowledge components explicit instead of collapsing everything into one opaque confidence value.
+
+```text
+                         ENTITY
+                           │
+              ┌────────────┼────────────┐
+              │            │            │
+              ▼            ▼            ▼
+            CLAIM       CONTEXT      RELATION
+              │            │            │
+              └────────────┼────────────┘
+                           ▼
+                        EVIDENCE
+                           │
+                           ▼
+                       PROVENANCE
+                           │
+                           ▼
+                    AUTHORITY CONTEXT
+                           │
+                           ▼
+                       UNCERTAINTY
+                           │
+                           ▼
+                    TRUST SIGNAL
+                           │
+                           ▼
+                  MACHINE-READABLE STATE
+```
+
 ### v0.1 specification surface
 
-| Layer | Artifact | Purpose |
-|:--|:--|:--|
-| **Entity** | `entity-state.schema.json` | Structured state envelope |
-| **Claim** | `claim.schema.json` | Atomic proposition |
-| **Evidence** | `evidence.schema.json` | Supporting / weakening material |
-| **Provenance** | `provenance.schema.json` | Origin and transformation context |
-| **Authority** | `authority.schema.json` | Contextual standing |
-| **Trust** | `trust-signal.schema.json` | Structured evaluation |
+- `entity-state.schema.json` — structured entity state
+- `claim.schema.json` — atomic propositions
+- `evidence.schema.json` — supporting and weakening material
+- `provenance.schema.json` — origin and transformation context
+- `authority.schema.json` — contextual standing
+- `trust-signal.schema.json` — structured evaluation
 
-[**Explore the specification layer →**](specs/)
+**[Browse the specifications →](specs/)**
 
 ---
 
-## RESEARCH / 001—004
+## RESEARCH TRAILS
 
-<table>
-<tr>
-<td width="50%">
+The public research program follows the same principle as the product: **start somewhere, establish context, follow the trail.**
 
-### 001 · TRUST IS NOT A SCORE
+### 001 / TRUST IS NOT A SCORE
 
-Can trust remain inspectable instead of becoming a single number?
+Can trust remain inspectable rather than being reduced to one unexplained number?
 
-**SIGNAL** · `TRUST`
+### 002 / CONTEXTUAL AUTHORITY
 
-</td>
-<td width="50%">
+Who has standing to establish a fact, and how should that standing change with context?
 
-### 002 · CONTEXTUAL AUTHORITY
+### 003 / UNCERTAINTY PROPAGATION
 
-Who has standing to establish a fact in a given context?
+How should uncertainty travel when one claim is derived from several others?
 
-**SIGNAL** · `AUTHORITY`
+### 004 / ENTITY RESOLUTION
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+How should ambiguous identity affect the knowledge graph and everything downstream of it?
 
-### 003 · UNCERTAINTY PROPAGATION
-
-How should uncertainty travel through derived claims?
-
-**SIGNAL** · `UNCERTAINTY`
-
-</td>
-<td width="50%">
-
-### 004 · ENTITY RESOLUTION
-
-How should ambiguous identity affect downstream reasoning?
-
-**SIGNAL** · `IDENTITY`
-
-</td>
-</tr>
-</table>
-
-Every research note follows:
-
-**QUESTION → HYPOTHESIS → METHOD → EVIDENCE → LIMITATIONS → CONCLUSION → NEXT EXPERIMENT**
-
-[**Open the research notebook →**](research/)
+**[Open the research notebook →](research/)**
 
 ---
 
-## THE PUBLIC SURFACE
+## WHAT THIS REPOSITORY IS
 
-KARADAVI deliberately separates **public reasoning** from the **private implementation**.
+Think of the public repository as **the forest's underlying map**.
 
-<table>
-<tr>
-<td width="50%">
+It contains:
 
-### PUBLIC
+`ARCHITECTURE` · `TERMINOLOGY` · `DESIGN PRINCIPLES` · `RESEARCH` · `SCHEMAS` · `EXAMPLES` · `THREAT MODEL` · `PUBLIC / PRIVATE BOUNDARY`
 
-`ARCHITECTURE`
+The live product is the editorial experience.
 
-`SPECIFICATIONS`
-
-`SCHEMAS`
-
-`RESEARCH`
-
-`EXAMPLES`
-
-`REPRODUCIBLE EXPERIMENTS`
-
-</td>
-<td width="50%">
-
-### PRIVATE
-
-`PROPRIETARY IMPLEMENTATION`
-
-`PRIVATE DATASETS`
-
-`DEPLOYMENT TOPOLOGY`
-
-`CREDENTIALS`
-
-`INTERNAL ENDPOINTS`
-
-`UNRELEASED PRODUCT WORK`
-
-</td>
-</tr>
-</table>
-
-> The public repository should explain the system without becoming a side channel into the private implementation.
-
-[Read the public/private boundary →](docs/public-private-boundary.md)
+The repository makes the underlying model inspectable.
 
 ---
 
-## REPOSITORY
+## REPOSITORY MAP
 
 ```text
 enterkaradavi/
 │
-├── docs/                 Architecture + design language
+├── docs/                 Knowledge architecture + design language
+│   ├── architecture.md
+│   ├── terminology.md
+│   ├── design-principles.md
+│   ├── research-model.md
+│   ├── threat-model.md
+│   └── public-private-boundary.md
+│
 ├── specs/                Machine-readable public contracts
+│   ├── entity-state.schema.json
+│   ├── claim.schema.json
+│   ├── evidence.schema.json
+│   ├── provenance.schema.json
+│   ├── authority.schema.json
+│   └── trust-signal.schema.json
+│
 ├── research/             Experiments + hypotheses
+│   ├── 001-trust-is-not-a-score.md
+│   ├── 002-contextual-authority.md
+│   ├── 003-uncertainty-propagation.md
+│   └── 004-entity-resolution.md
+│
 ├── examples/             Synthetic reference states
-└── .github/              Validation + contribution workflow
+│   ├── basic-entity-state.json
+│   ├── conflicting-claims.json
+│   ├── provenance-chain.json
+│   └── trust-evaluation.json
+│
+└── assets/               KARADAVI visual language
 ```
-
-The repository is intentionally **research-first**: the terminology and schemas are experimental, machine-readable does not mean finalized, and new evidence can change the model.
 
 ---
 
-## WHAT THIS IS NOT
+## PUBLIC / PRIVATE
 
-KARADAVI is not another chatbot, generic search engine, universal truth score, replacement for domain expertise, or a system that turns uncertainty into confident language.
+The public repository is intentionally a **research surface**, not a mirror of the private implementation.
 
-It is the **infrastructure underneath intelligent systems** that need explicit perception, evidence, authority and trust context.
+| PUBLIC | PRIVATE |
+|:--|:--|
+| Architecture | Proprietary implementation |
+| Specifications | Private datasets |
+| Schemas | Deployment topology |
+| Research | Credentials |
+| Examples | Internal endpoints |
+| Reproducible experiments | Unreleased product work |
+
+> The public layer should make KARADAVI understandable without exposing the operational system behind it.
+
+**[Read the public/private boundary →](docs/public-private-boundary.md)**
+
+---
+
+## STATUS
+
+**ACTIVE RESEARCH · EARLY SPECIFICATION · v0.1**
+
+The terminology and schemas are experimental. Machine-readable does not mean finalized. New evidence may change the model.
+
+---
+
+## CONTRIBUTE
+
+The best contributions make KARADAVI more **clear, rigorous, reproducible, or useful**.
+
+Architecture proposals, specification improvements, research notes, schema design, reference examples, and documentation corrections are welcome.
+
+**[Read CONTRIBUTING.md →](CONTRIBUTING.md)**
 
 ---
 
 <div align="center">
 
-## KARADAVI
+<img src="assets/karadavi-forest.svg" alt="KARADAVI — The Knowledge Forest" width="100%" />
 
-### MACHINE TRUST, MADE EXPLICIT.
+### KARADAVI
+
+**A quiet library for the internet.**
+
+*Knowledge is automatic. Writing is intentional. Publishing is human.*
 
 <br />
 
-<a href="https://www.karadavi.com"><strong>OPEN THE LIVE SYSTEM ↗</strong></a>
+[**www.karadavi.com →**](https://www.karadavi.com)
 
 <br /><br />
 
-<sub>PUBLIC RESEARCH SURFACE · SPEC v0.1 · MIT</sub>
+<sub>Public research surface · v0.1 · MIT</sub>
 
 </div>
