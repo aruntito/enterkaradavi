@@ -1,47 +1,52 @@
 # Specifications
 
-This directory contains public specifications and schemas for KARADAVI concepts.
+Public machine-readable specifications for KARADAVI.
 
-## Initial specification
+## v0.1 surface
 
-### `entity-state.schema.json`
+| Schema | Represents |
+| --- | --- |
+| [`entity-state.schema.json`](entity-state.schema.json) | Top-level machine-readable state |
+| [`claim.schema.json`](claim.schema.json) | A proposition about a subject |
+| [`evidence.schema.json`](evidence.schema.json) | Supporting, weakening, or contextual evidence |
+| [`provenance.schema.json`](provenance.schema.json) | Origin and transformation history |
+| [`authority.schema.json`](authority.schema.json) | Contextual standing of a source or actor |
+| [`trust-signal.schema.json`](trust-signal.schema.json) | Structured evaluation of a claim |
 
-The first experimental schema models a machine-readable state around an entity or digital artifact.
+## Model
 
-It provides a common envelope for:
+```text
+Entity
+  └── Claim
+       ├── Evidence
+       │    └── Provenance
+       ├── Authority context
+       └── Uncertainty
+              ↓
+        Trust signal
+              ↓
+     Machine-readable state
+```
 
-- identity;
-- claims;
-- evidence references;
-- provenance;
-- contextual authority; and
-- uncertainty / state.
+The schemas deliberately keep these concepts separate. A consuming system can therefore inspect the basis of an evaluation instead of receiving only an opaque score.
 
-The schema is intentionally small. It is a research artifact, not a finalized interoperability standard.
+## Status
 
-## Example
+These schemas are **experimental v0.1**. They are research artifacts, not finalized interoperability standards.
 
-See [`../examples/basic-entity-state.json`](../examples/basic-entity-state.json) for a minimal instance.
+Changes that alter field meaning, required fields, or interpretation should be treated as specification changes and documented deliberately.
 
-## Specification principles
+## Principles
 
-1. **Separate observation from interpretation.**
-2. **Keep provenance attached to derived information.**
-3. **Allow uncertainty and conflict to be represented explicitly.**
-4. **Do not require a universal trust score.**
-5. **Version normative changes deliberately.**
-6. **Keep experimental proposals clearly labeled.**
+1. Separate observation from interpretation.
+2. Keep provenance attached to derived information.
+3. Preserve conflict and uncertainty explicitly.
+4. Do not require a universal trust score.
+5. Prefer composable records over opaque envelopes.
+6. Keep experimental proposals clearly labeled.
 
-## Future direction
+## Examples
 
-Potential future specifications include:
-
-- claim and evidence records;
-- source and authority context;
-- provenance chains;
-- identity resolution records;
-- uncertainty propagation;
-- trust evaluations; and
-- machine-to-machine state exchange.
+See [`../examples/`](../examples/) for small synthetic instances.
 
 No specification in this directory should expose private deployment details or depend on unpublished internal implementation.
