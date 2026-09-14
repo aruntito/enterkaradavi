@@ -8,6 +8,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/status-active%20research-111827?style=flat-square" alt="Active research" />
+  <img src="https://img.shields.io/badge/spec-v0.1-111827?style=flat-square" alt="Specification v0.1" />
   <img src="https://img.shields.io/badge/license-MIT-111827?style=flat-square" alt="MIT License" />
   <img src="https://img.shields.io/badge/surface-public%20research-111827?style=flat-square" alt="Public research" />
 </p>
@@ -15,6 +16,7 @@
 <p>
   <a href="#the-idea">The idea</a> ·
   <a href="#architecture">Architecture</a> ·
+  <a href="#public-model">Public model</a> ·
   <a href="#research">Research</a> ·
   <a href="#repository-map">Repository</a>
 </p>
@@ -47,8 +49,6 @@ It explores how software can move from raw digital observations toward structure
 ---
 
 ## Architecture
-
-KARADAVI's public conceptual pipeline is:
 
 ```text
 ┌──────────────────┐
@@ -85,46 +85,63 @@ KARADAVI's public conceptual pipeline is:
 └──────────────────┘
 ```
 
-The important distinction is that **trust is not treated as a magic number**. A useful trust signal should remain connected to the evidence, provenance, authority context, and uncertainty that produced it.
+Trust is deliberately **not** treated as a magic number. A useful signal remains connected to the evidence, provenance, authority context, and uncertainty that produced it.
 
 [Read the full architecture →](docs/architecture.md)
 
 ---
 
-## Research model
+## Public model
 
-KARADAVI currently investigates a structured chain:
-
-```text
-Observation
-    ↓
-Evidence
-    ↓
-Claim
-    ↓
-Evaluation
-    ↓
-Trust Signal
-```
-
-Rather than collapsing everything into:
+The first public specification layer models the objects a trust-aware system needs to keep separate:
 
 ```text
-Observation → Score
+ENTITY
+  │
+  ├── CLAIM ────────────────┐
+  │      │                  │
+  │      └── EVIDENCE ── PROVENANCE
+  │                         │
+  └── AUTHORITY CONTEXT ────┘
+              │
+              ↓
+       TRUST SIGNAL
+              │
+              ↓
+    MACHINE-READABLE STATE
 ```
 
-This keeps the reasoning inspectable and leaves room for disagreement, re-evaluation, and new evidence.
+### v0.1 specification surface
 
-### Design principles
+| Specification | Purpose |
+| --- | --- |
+| `entity-state.schema.json` | Top-level entity state |
+| `claim.schema.json` | Atomic propositions |
+| `evidence.schema.json` | Supporting or weakening artifacts |
+| `provenance.schema.json` | Origin and transformation context |
+| `authority.schema.json` | Contextual source standing |
+| `trust-signal.schema.json` | Structured evaluation result |
 
-- **Provenance first** — preserve where information came from.
-- **Context matters** — authority is contextual, not automatically universal.
-- **Uncertainty is data** — unknown should not silently become true or false.
-- **Evidence is inspectable** — derived signals should be traceable to inputs.
-- **Identity is explicit** — ambiguous entity resolution should stay ambiguous.
-- **Machine-readable by design** — outputs should be usable by downstream systems.
+[Explore the specifications →](specs/)
 
-[Read the research model →](docs/research-model.md)
+> **Design rule:** evidence, authority, identity, and uncertainty remain inspectable instead of being collapsed into one opaque score.
+
+---
+
+## Research
+
+KARADAVI treats machine trust as a research problem rather than a single algorithm.
+
+Current public questions include:
+
+- Can authority be modeled as contextual standing rather than a global source ranking?
+- How should uncertainty propagate through derived claims?
+- How should conflicting claims remain visible to downstream systems?
+- How should ambiguous entity resolution affect later evaluations?
+
+Research notes use explicit questions, hypotheses, methods, observations, limitations, and next experiments.
+
+[Read the research notebook →](research/)
 
 ---
 
@@ -164,25 +181,34 @@ enterkaradavi/
 │
 ├── docs/
 │   ├── architecture.md
+│   ├── terminology.md
+│   ├── design-principles.md
 │   ├── research-model.md
+│   ├── threat-model.md
 │   └── public-private-boundary.md
 │
 ├── specs/
-│   ├── README.md
-│   └── entity-state.schema.json
+│   ├── entity-state.schema.json
+│   ├── claim.schema.json
+│   ├── evidence.schema.json
+│   ├── provenance.schema.json
+│   ├── authority.schema.json
+│   └── trust-signal.schema.json
 │
 ├── research/
-│   ├── README.md
-│   └── 001-trust-is-not-a-score.md
+│   ├── 001-trust-is-not-a-score.md
+│   ├── 002-contextual-authority.md
+│   ├── 003-uncertainty-propagation.md
+│   └── 004-entity-resolution.md
 │
 ├── examples/
-│   ├── README.md
-│   └── basic-entity-state.json
+│   ├── basic-entity-state.json
+│   ├── conflicting-claims.json
+│   ├── provenance-chain.json
+│   └── trust-evaluation.json
 │
 └── llms.txt
 ```
-
-The repository is intentionally documentation- and specification-first. Implementation can evolve independently while the public model remains understandable and reviewable.
 
 ---
 
@@ -203,17 +229,15 @@ The public repository should stand on its own: someone should be able to underst
 
 ## Status
 
-**Active research / early specification.**
+**Active research / early specification · v0.1**
 
-The concepts, schemas, terminology, and architecture are expected to evolve as experiments are conducted. Experimental material is labeled as such rather than presented as settled standards.
+The schemas and terminology are experimental and expected to evolve. A specification is not considered stable merely because it is machine-readable.
 
 ---
 
 ## Contributing
 
 KARADAVI welcomes contributions that improve the **clarity, rigor, reproducibility, or usefulness** of the public research.
-
-Good contributions include architecture proposals, specification improvements, research notes, schema design, reference examples, and documentation corrections.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
