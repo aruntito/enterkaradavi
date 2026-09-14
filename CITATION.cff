@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "KARADAVI"
+type: software
+abstract: "Experimental research infrastructure for machine trust, perception, semantic authority, evidence, provenance, uncertainty, and machine-readable state."
+repository-code: "https://github.com/aruntito/enterkaradavi"
+url: "https://github.com/aruntito/enterkaradavi"
+license: MIT
+keywords:
+  - machine-trust
+  - perception
+  - semantic-authority
+  - provenance
+  - entity-resolution
+  - uncertainty
+  - knowledge-representation
+  - ai-infrastructure
+authors:
+  - family-names: TITO
+    given-names: Arun
+    affiliation: "KARADAVI"
