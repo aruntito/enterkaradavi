@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/claim.schema.json",
+  "title": "KARADAVI Claim",
+  "description": "A proposition represented for machine evaluation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "subject", "predicate", "object", "status"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "subject": { "type": "string", "minLength": 1 },
+    "predicate": { "type": "string", "minLength": 1 },
+    "object": {},
+    "status": { "enum": ["asserted", "disputed", "retracted", "unknown"] },
+    "context": { "type": "object", "additionalProperties": true }
+  }
+}
