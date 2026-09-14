@@ -1,0 +1,32 @@
+{
+  "id": "entity:example-acme",
+  "type": "entity",
+  "label": "Example Organization",
+  "state": "supported",
+  "identifiers": [
+    {
+      "scheme": "example",
+      "value": "acme-001"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:example-acme:name",
+      "predicate": "name",
+      "value": "Example Organization",
+      "status": "supported",
+      "evidence": ["evidence:example-registry-001"]
+    }
+  ],
+  "provenance": [
+    {
+      "source": "https://example.org/registry/acme-001",
+      "observedAt": "2026-09-14T00:00:00Z",
+      "retrievedAt": "2026-09-14T00:01:00Z"
+    }
+  ],
+  "authority": {
+    "context": "example organization registry",
+    "sources": ["https://example.org/registry"]
+  }
+}
