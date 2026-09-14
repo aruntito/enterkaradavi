@@ -1,0 +1,1 @@
+Site-inspired direction confirmed from user-provided screenshots.
