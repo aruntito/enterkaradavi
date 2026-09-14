@@ -1,0 +1,1 @@
+KARADAVI README direction: quiet editorial atlas; warm off-white paper; forest green; thin rules; restrained amber; numbered sections; generous whitespace; knowledge-forest imagery; no neon gradients or generic developer badge walls.
