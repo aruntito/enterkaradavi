@@ -2,187 +2,215 @@
 
 # KARADAVI
 
-### Machine trust · perception · semantic authority
+### MACHINE TRUST · PERCEPTION · SEMANTIC AUTHORITY
 
-**Infrastructure for helping machines understand what they are seeing, where it came from, and how it should be treated.**
+**A research and specification project for systems that need to understand what they observe, where it came from, and how it should be treated.**
 
-<p>
-  <a href="https://www.karadavi.com"><img src="https://img.shields.io/badge/Live%20Site-karadavi.com-111827?style=for-the-badge" alt="Live site" /></a>
-  <img src="https://img.shields.io/badge/status-active%20research-111827?style=for-the-badge" alt="Active research" />
-  <img src="https://img.shields.io/badge/spec-v0.1-111827?style=for-the-badge" alt="Specification v0.1" />
-  <img src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge" alt="MIT License" />
-</p>
+<br />
 
-<p>
-  <a href="https://www.karadavi.com">Website</a> ·
-  <a href="#the-idea">The idea</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#public-model">Public model</a> ·
-  <a href="#research">Research</a> ·
-  <a href="#repository-map">Repository</a>
-</p>
+<a href="https://www.karadavi.com"><strong>↗ OPEN KARADAVI.COM</strong></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="https://github.com/aruntito/enterkaradavi">RESEARCH REPOSITORY</a>
+
+<br /><br />
+
+<img src="https://img.shields.io/badge/STATUS-ACTIVE%20RESEARCH-111111?style=flat-square" alt="Active research" />
+<img src="https://img.shields.io/badge/SPEC-v0.1-111111?style=flat-square" alt="Specification v0.1" />
+<img src="https://img.shields.io/badge/SURFACE-PUBLIC-111111?style=flat-square" alt="Public surface" />
+<img src="https://img.shields.io/badge/LICENSE-MIT-111111?style=flat-square" alt="MIT License" />
 
 </div>
 
 ---
 
-## The idea
+## ↗ THE LIVE SYSTEM
 
-Modern systems can retrieve enormous amounts of information. The harder problem is deciding **what that information means, what supports it, who has authority over it, and how uncertainty should be represented**.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-KARADAVI is an experimental research platform for that layer.
+### KARADAVI.COM
 
-It explores how software can move from raw digital observations toward structured, inspectable, machine-readable trust context.
+The live KARADAVI surface.
 
-> **Machines should not only retrieve information. They should understand what they are seeing, where it came from, and why it should be trusted.**
+**Product · experience · system**
 
-### The core questions
+[**Enter KARADAVI →**](https://www.karadavi.com)
 
-| Question | KARADAVI concern |
-| --- | --- |
-| **What is this?** | Perception + entity identification |
-| **What does it mean?** | Semantics + context |
-| **What supports it?** | Evidence + provenance |
-| **Who has standing here?** | Contextual authority |
-| **How certain is it?** | Uncertainty + confidence |
-| **How should software consume it?** | Machine-readable state |
+</td>
+<td width="50%" valign="top">
+
+### THIS REPOSITORY
+
+The public technical record behind the system.
+
+**Research · specifications · models · experiments**
+
+[**Explore the research →**](https://github.com/aruntito/enterkaradavi)
+
+</td>
+</tr>
+</table>
+
+> **The website is the front door. This repository is the reasoning behind it.**
 
 ---
 
-## Architecture
+## THE PROBLEM
+
+Machines can retrieve enormous amounts of information.
+
+Retrieval is not the hard part.
+
+The harder questions are:
+
+- **What is this?**
+- **What does it mean in context?**
+- **What evidence supports it?**
+- **Where did that evidence come from?**
+- **Who has authority here?**
+- **What is uncertain or contested?**
+- **How should another machine treat the result?**
+
+KARADAVI explores the infrastructure required to answer those questions without hiding the reasoning behind a single opaque confidence number.
+
+---
+
+## THE IDEA
 
 ```text
-┌──────────────────┐
-│   Digital World  │
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│    Perception    │  What is present?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│  Identification  │  What entity is this?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│     Semantics    │  What does it mean?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│     Evidence     │  What supports the claim?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│     Authority    │  Which source has standing?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│      Trust       │  How should it be treated?
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│ Machine-readable │
-│      State       │
-└──────────────────┘
+                         THE DIGITAL WORLD
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │  PERCEPTION  │
+                         └──────┬───────┘
+                                │
+                                ▼
+                        ┌────────────────┐
+                        │ IDENTIFICATION │
+                        └───────┬────────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │   SEMANTICS  │
+                         └──────┬───────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │   EVIDENCE   │
+                         └──────┬───────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │   AUTHORITY  │
+                         └──────┬───────┘
+                                │
+                                ▼
+                         ┌──────────────┐
+                         │    TRUST     │
+                         └──────┬───────┘
+                                │
+                                ▼
+                    ┌──────────────────────┐
+                    │ MACHINE-READABLE     │
+                    │       STATE          │
+                    └──────────────────────┘
 ```
 
-Trust is deliberately **not** treated as a magic number. A useful signal remains connected to the evidence, provenance, authority context, and uncertainty that produced it.
+**Trust is an output of inspectable context — not a magic number.**
 
-**Explore KARADAVI:** [www.karadavi.com](https://www.karadavi.com)
-
-[Read the full architecture →](docs/architecture.md)
+[Read the architecture →](docs/architecture.md)
 
 ---
 
-## Public model
+## THE PUBLIC MODEL
 
-The first public specification layer models the objects a trust-aware system needs to keep separate:
+KARADAVI keeps the pieces separate so downstream systems can inspect how a conclusion was formed.
 
 ```text
-ENTITY
-  │
-  ├── CLAIM ────────────────┐
-  │      │                  │
-  │      └── EVIDENCE ── PROVENANCE
-  │                         │
-  └── AUTHORITY CONTEXT ────┘
-              │
-              ↓
-       TRUST SIGNAL
-              │
-              ↓
-    MACHINE-READABLE STATE
+ ENTITY
+   │
+   ├──────── CLAIM ───────────────┐
+   │              │              │
+   │              ▼              │
+   │           EVIDENCE           │
+   │              │              │
+   │              ▼              │
+   │         PROVENANCE           │
+   │                             │
+   └──── AUTHORITY CONTEXT ──────┘
+                  │
+                  ▼
+            UNCERTAINTY
+                  │
+                  ▼
+            TRUST SIGNAL
+                  │
+                  ▼
+       MACHINE-READABLE STATE
 ```
 
 ### v0.1 specification surface
 
-| Specification | Purpose |
-| --- | --- |
-| `entity-state.schema.json` | Top-level entity state |
-| `claim.schema.json` | Atomic propositions |
-| `evidence.schema.json` | Supporting or weakening artifacts |
-| `provenance.schema.json` | Origin and transformation context |
-| `authority.schema.json` | Contextual source standing |
-| `trust-signal.schema.json` | Structured evaluation result |
+| Layer | Public artifact | Role |
+|:--|:--|:--|
+| Entity | `entity-state.schema.json` | Structured state envelope |
+| Claim | `claim.schema.json` | Atomic proposition |
+| Evidence | `evidence.schema.json` | Supporting / weakening material |
+| Provenance | `provenance.schema.json` | Origin and transformation context |
+| Authority | `authority.schema.json` | Contextual standing |
+| Trust | `trust-signal.schema.json` | Structured evaluation |
 
-[Explore the specifications →](specs/)
-
-> **Design rule:** evidence, authority, identity, and uncertainty remain inspectable instead of being collapsed into one opaque score.
+[**Browse specifications →**](specs/)
 
 ---
 
-## Research
+## RESEARCH PROGRAM
 
-KARADAVI treats machine trust as a research problem rather than a single algorithm.
+KARADAVI is deliberately research-first.
 
-Current public questions include:
+| # | Question |
+|:--:|:--|
+| `001` | **Trust is not a score** — can trust remain inspectable? |
+| `002` | **Contextual authority** — who has standing to establish a fact? |
+| `003` | **Uncertainty propagation** — how should uncertainty travel through derived claims? |
+| `004` | **Entity resolution** — how should ambiguous identity affect downstream reasoning? |
 
-- Can authority be modeled as contextual standing rather than a global source ranking?
-- How should uncertainty propagate through derived claims?
-- How should conflicting claims remain visible to downstream systems?
-- How should ambiguous entity resolution affect later evaluations?
+Every research note follows a simple discipline:
 
-Research notes use explicit questions, hypotheses, methods, observations, limitations, and next experiments.
+**QUESTION → HYPOTHESIS → METHOD → EVIDENCE → LIMITATIONS → CONCLUSION → NEXT EXPERIMENT**
 
-[Read the research notebook →](research/)
+[**Open the research notebook →**](research/)
 
 ---
 
-## What KARADAVI is not
+## WHAT THIS IS NOT
 
-KARADAVI is **not** intended to be:
+KARADAVI is not trying to become:
 
 - another chatbot;
-- a generic search engine;
+- another generic search engine;
 - a universal truth score;
 - a replacement for domain expertise; or
-- a system that hides uncertainty behind confident language.
+- a system that turns uncertainty into confident language.
 
-The project is interested in the **infrastructure underneath intelligent systems**.
-
----
-
-## Research areas
-
-- Entity perception and resolution
-- Semantic representation
-- Evidence modeling
-- Provenance
-- Source authority
-- Contextual trust
-- Confidence and uncertainty
-- Machine-readable knowledge
-- Claim and relationship modeling
-- AI perception infrastructure
+The focus is the **infrastructure underneath intelligent systems**.
 
 ---
 
-## Repository map
+## RESEARCH AREAS
+
+`ENTITY PERCEPTION` · `ENTITY RESOLUTION` · `SEMANTICS` · `EVIDENCE` · `PROVENANCE` · `AUTHORITY` · `UNCERTAINTY` · `TRUST` · `KNOWLEDGE REPRESENTATION` · `MACHINE-READABLE STATE`
+
+---
+
+## REPOSITORY MAP
 
 ```text
 enterkaradavi/
 │
-├── docs/
+├── docs/                 Architecture + design language
 │   ├── architecture.md
 │   ├── terminology.md
 │   ├── design-principles.md
@@ -190,7 +218,7 @@ enterkaradavi/
 │   ├── threat-model.md
 │   └── public-private-boundary.md
 │
-├── specs/
+├── specs/                Machine-readable public contracts
 │   ├── entity-state.schema.json
 │   ├── claim.schema.json
 │   ├── evidence.schema.json
@@ -198,82 +226,74 @@ enterkaradavi/
 │   ├── authority.schema.json
 │   └── trust-signal.schema.json
 │
-├── research/
+├── research/             Experiments + hypotheses
 │   ├── 001-trust-is-not-a-score.md
 │   ├── 002-contextual-authority.md
 │   ├── 003-uncertainty-propagation.md
 │   └── 004-entity-resolution.md
 │
-├── examples/
+├── examples/             Synthetic reference states
 │   ├── basic-entity-state.json
 │   ├── conflicting-claims.json
 │   ├── provenance-chain.json
 │   └── trust-evaluation.json
 │
-└── llms.txt
+└── .github/              Validation + contribution workflow
 ```
 
 ---
 
-## Public / private boundary
+## PUBLIC / PRIVATE
 
-This repository is the **public research and architecture surface** for KARADAVI.
+`enterkaradavi` is intentionally the **public research surface**.
 
-The private `karadavi` repository remains the implementation and operational surface. Private deployment topology, private datasets, credentials, internal endpoints, unreleased product work, and proprietary implementation are intentionally excluded.
+The private `karadavi` repository remains the implementation and operational surface.
 
-The public repository should stand on its own: someone should be able to understand the ideas without access to the private system.
+### Public
+
+Architecture · specifications · schemas · research · examples · reproducible experiments · documentation
+
+### Private
+
+Proprietary implementation · private datasets · deployment topology · credentials · internal endpoints · unreleased product work
+
+> [!IMPORTANT]
+> The public repository should explain the system without becoming a side channel into the private implementation.
 
 [Read the boundary policy →](docs/public-private-boundary.md)
 
-> [!IMPORTANT]
-> Public documentation must never become a side channel for private implementation or operational information.
+---
+
+## STATUS
+
+**ACTIVE RESEARCH · EARLY SPECIFICATION · v0.1**
+
+The terminology and schemas are experimental. Machine-readable does not mean finalized. New evidence may change the model.
 
 ---
 
-## Live system
+## CONTRIBUTE
 
-The public research repository and the live KARADAVI surface have intentionally different roles:
+The best contributions make KARADAVI more **clear, rigorous, reproducible, or useful**.
 
-**Research →** specifications, experiments, schemas, architecture, and reproducible thinking.
+Architecture proposals, specification improvements, research notes, schema design, reference examples, and documentation corrections are welcome.
 
-**Live →** the product-facing KARADAVI experience.
-
-### Visit KARADAVI
-
-**[www.karadavi.com](https://www.karadavi.com)**
-
-The website is the front door. This repository is the public record of the ideas and technical model behind it.
+[**Read CONTRIBUTING.md →**](CONTRIBUTING.md)
 
 ---
-
-## Status
-
-**Active research / early specification · v0.1**
-
-The schemas and terminology are experimental and expected to evolve. A specification is not considered stable merely because it is machine-readable.
-
-## Contributing
-
-KARADAVI welcomes contributions that improve the **clarity, rigor, reproducibility, or usefulness** of the public research.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Security
-
-Do not publish credentials, private datasets, internal endpoints, private deployment configuration, or unreleased implementation details.
-
-See [SECURITY.md](SECURITY.md).
-
-## License
-
-MIT — see [LICENSE](LICENSE).
 
 <div align="center">
 
-**KARADAVI**
+### KARADAVI
 
-_machine trust, made explicit._
+**Machine trust, made explicit.**
 
-[www.karadavi.com](https://www.karadavi.com)
+<br />
+
+[**www.karadavi.com ↗**](https://www.karadavi.com)
+
+<br /><br />
+
+<sub>Public research surface · v0.1 · MIT</sub>
 
 </div>
