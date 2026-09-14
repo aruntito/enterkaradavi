@@ -1,0 +1,15 @@
+{
+  "claim_ref": "claim:001",
+  "disposition": "partially_supported",
+  "basis": [
+    "Evidence exists from a source relevant to the claim.",
+    "A competing claim remains unresolved."
+  ],
+  "authority_refs": ["authority:example-domain"],
+  "evidence_refs": ["evidence:official-record", "evidence:secondary-report"],
+  "uncertainty": {
+    "type": "conflicting_claims",
+    "material": true
+  },
+  "method": "example-structured-evaluation"
+}
