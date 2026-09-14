@@ -1,58 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" fill="none">
-<defs>
-  <linearGradient id="bg" x1="80" y1="40" x2="1320" y2="700" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#07111F"/>
-    <stop offset="0.48" stop-color="#11152E"/>
-    <stop offset="1" stop-color="#1D1027"/>
-  </linearGradient>
-  <linearGradient id="line" x1="60" y1="560" x2="1330" y2="190" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#00D9FF"/>
-    <stop offset="0.35" stop-color="#6C63FF"/>
-    <stop offset="0.7" stop-color="#FF4FD8"/>
-    <stop offset="1" stop-color="#FFB84D"/>
-  </linearGradient>
-  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#0088FF"/></linearGradient>
-  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A78BFA"/><stop offset="1" stop-color="#6C63FF"/></linearGradient>
-  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF73E6"/><stop offset="1" stop-color="#FF3DAF"/></linearGradient>
-  <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFD166"/><stop offset="1" stop-color="#FF9F43"/></linearGradient>
-  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="18"/></filter>
-  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" stroke="#FFFFFF" stroke-opacity=".045"/></pattern>
-</defs>
-<rect width="1400" height="720" rx="34" fill="url(#bg)"/>
-<rect width="1400" height="720" rx="34" fill="url(#grid)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">How the KARADAVI knowledge forest works</title>
+  <desc id="desc">Four sequential KARADAVI knowledge forest stages: Discover, Research, Extract, and Connect.</desc>
 
-<circle cx="1140" cy="220" r="170" fill="#FF4FD8" fill-opacity=".12" filter="url(#glow)"/>
-<circle cx="280" cy="560" r="150" fill="#00D9FF" fill-opacity=".1" filter="url(#glow)"/>
+  <rect width="1200" height="1040" rx="28" fill="#F8F8F6"/>
 
-<text x="76" y="88" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="5">KARADAVI</text>
-<text x="77" y="120" fill="#9BA9C6" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="3">MACHINE TRUST  /  PERCEPTION  /  SEMANTIC AUTHORITY</text>
+  <text x="72" y="72" fill="#214F43" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4">THE KNOWLEDGE FOREST</text>
 
-<text x="76" y="215" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="800">Make the reasoning</text>
-<text x="76" y="278" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="800">behind trust inspectable.</text>
-<text x="78" y="325" fill="#AEB8CD" font-family="Inter,Arial,sans-serif" font-size="17">A public research surface for machines that need to understand</text>
-<text x="78" y="351" fill="#AEB8CD" font-family="Inter,Arial,sans-serif" font-size="17">what they observe, where it came from, and how it should be treated.</text>
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <!-- 01 / DISCOVER -->
+    <rect x="48" y="112" width="1104" height="190" rx="28" fill="#FFFFFF" stroke="#E5E6E2" stroke-width="2"/>
+    <text x="82" y="158" fill="#214F43" font-size="18" font-weight="700" letter-spacing="3">01</text>
+    <text x="1118" y="158" text-anchor="end" fill="#66716D" font-size="17" font-weight="700" letter-spacing="2">DISCOVER</text>
+    <text x="82" y="210" fill="#5F625F" font-size="26" font-weight="400">Identify emerging subjects, entities, and</text>
+    <text x="82" y="250" fill="#5F625F" font-size="26" font-weight="400">historical inflection points across tech,</text>
+    <text x="82" y="290" fill="#5F625F" font-size="26" font-weight="400">science, and industry.</text>
 
-<path d="M60 545 C210 475 290 610 440 540 C590 470 675 350 820 425 C965 500 1050 305 1190 350 C1270 376 1320 400 1370 370" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
-<path d="M60 548 C210 478 290 613 440 543 C590 473 675 353 820 428 C965 503 1050 308 1190 353 C1270 379 1320 403 1370 373" stroke="url(#line)" stroke-width="18" stroke-linecap="round" opacity=".12" filter="url(#glow)"/>
+    <!-- 02 / RESEARCH -->
+    <rect x="48" y="330" width="1104" height="190" rx="28" fill="#FFFFFF" stroke="#E5E6E2" stroke-width="2"/>
+    <text x="82" y="376" fill="#214F43" font-size="18" font-weight="700" letter-spacing="3">02</text>
+    <text x="1118" y="376" text-anchor="end" fill="#66716D" font-size="17" font-weight="700" letter-spacing="2">RESEARCH</text>
+    <text x="82" y="428" fill="#5F625F" font-size="26" font-weight="400">Aggregate verified primary sources, SEC</text>
+    <text x="82" y="468" fill="#5F625F" font-size="26" font-weight="400">filings, patents, court records, and peer-</text>
+    <text x="82" y="508" fill="#5F625F" font-size="26" font-weight="400">reviewed literature.</text>
 
-<g>
- <circle cx="240" cy="520" r="9" fill="#08101D" stroke="#00D9FF" stroke-width="3"/><circle cx="240" cy="520" r="3" fill="#00D9FF"/>
- <circle cx="510" cy="505" r="9" fill="#08101D" stroke="#6C63FF" stroke-width="3"/><circle cx="510" cy="505" r="3" fill="#6C63FF"/>
- <circle cx="820" cy="425" r="9" fill="#08101D" stroke="#FF4FD8" stroke-width="3"/><circle cx="820" cy="425" r="3" fill="#FF4FD8"/>
- <circle cx="1100" cy="330" r="9" fill="#08101D" stroke="#FFB84D" stroke-width="3"/><circle cx="1100" cy="330" r="3" fill="#FFB84D"/>
-</g>
+    <!-- 03 / EXTRACT -->
+    <rect x="48" y="548" width="1104" height="190" rx="28" fill="#FFFFFF" stroke="#E5E6E2" stroke-width="2"/>
+    <text x="82" y="594" fill="#214F43" font-size="18" font-weight="700" letter-spacing="3">03</text>
+    <text x="1118" y="594" text-anchor="end" fill="#66716D" font-size="17" font-weight="700" letter-spacing="2">EXTRACT</text>
+    <text x="82" y="646" fill="#5F625F" font-size="26" font-weight="400">Parse canonical facts, key dates, attributes,</text>
+    <text x="82" y="686" fill="#5F625F" font-size="26" font-weight="400">and structured assertions into the entity</text>
+    <text x="82" y="726" fill="#5F625F" font-size="26" font-weight="400">registry.</text>
 
-<g font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2">
- <rect x="76" y="610" width="176" height="50" rx="25" fill="url(#cyan)"/><text x="105" y="641" fill="#04101A">01  PERCEIVE</text>
- <rect x="268" y="610" width="176" height="50" rx="25" fill="url(#violet)"/><text x="298" y="641" fill="#FFFFFF">02  IDENTIFY</text>
- <rect x="460" y="610" width="176" height="50" rx="25" fill="url(#pink)"/><text x="495" y="641" fill="#FFFFFF">03  EVALUATE</text>
- <rect x="652" y="610" width="176" height="50" rx="25" fill="url(#amber)"/><text x="686" y="641" fill="#241707">04  EXPLAIN</text>
-</g>
+    <!-- 04 / CONNECT -->
+    <rect x="48" y="766" width="1104" height="190" rx="28" fill="#FFFFFF" stroke="#E5E6E2" stroke-width="2"/>
+    <text x="82" y="812" fill="#214F43" font-size="18" font-weight="700" letter-spacing="3">04</text>
+    <text x="1118" y="812" text-anchor="end" fill="#66716D" font-size="17" font-weight="700" letter-spacing="2">CONNECT</text>
+    <text x="82" y="864" fill="#5F625F" font-size="26" font-weight="400">Map bidirectional graph relationships linking</text>
+    <text x="82" y="904" fill="#5F625F" font-size="26" font-weight="400">people, companies, technologies, and</text>
+    <text x="82" y="944" fill="#5F625F" font-size="26" font-weight="400">concepts.</text>
+  </g>
 
-<g opacity=".9">
- <rect x="1050" y="535" width="270" height="100" rx="18" fill="#FFFFFF" fill-opacity=".06" stroke="#FFFFFF" stroke-opacity=".12"/>
- <text x="1080" y="568" fill="#7E8BA8" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2">PUBLIC RESEARCH</text>
- <text x="1080" y="598" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700">Trust, made explicit.</text>
- <text x="1080" y="620" fill="#8E9AB3" font-family="Inter,Arial,sans-serif" font-size="11">SPEC v0.1  ·  OPEN SURFACE</text>
-</g>
+  <path d="M72 1000H1128" stroke="#DDE0DC" stroke-width="2"/>
 </svg>
