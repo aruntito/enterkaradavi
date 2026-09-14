@@ -1,0 +1,11 @@
+{
+  "claim": "claim:001",
+  "provenance": {
+    "source": "source:example-registry",
+    "retrieved_at": "2026-09-14T00:00:00Z",
+    "content_digest": "sha256:example",
+    "parent_refs": ["observation:001"],
+    "transformations": ["extracted", "normalized"]
+  },
+  "purpose": "Demonstrate that derived claims can retain origin and transformation context."
+}
