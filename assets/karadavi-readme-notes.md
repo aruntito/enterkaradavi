@@ -1,0 +1,1 @@
+This file intentionally contains no implementation. Visual direction for the public research surface follows KARADAVI's editorial language: warm off-white paper, forest green, fine rules, quiet typography, numbered sections, knowledge-forest imagery, and restrained amber accents.
