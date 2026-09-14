@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+<title id="title">KARADAVI — The Knowledge Forest</title><desc id="desc">A quiet editorial landscape of connected knowledge.</desc>
+<defs>
+  <radialGradient id="paper" cx="50%" cy="45%" r="80%"><stop offset="0" stop-color="#fbfcf9"/><stop offset="1" stop-color="#eef3ef"/></radialGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfe9e3" stop-opacity=".7"/><stop offset=".55" stop-color="#f7f5ee" stop-opacity=".15"/><stop offset="1" stop-color="#d9c9a8" stop-opacity=".35"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1400" height="720" fill="url(#paper)"/>
+<ellipse cx="1090" cy="300" rx="300" ry="180" fill="#d7e5dc" opacity=".45" filter="url(#blur)"/>
+<ellipse cx="360" cy="520" rx="350" ry="160" fill="#e7dcc4" opacity=".32" filter="url(#blur)"/>
+<g fill="none" stroke="#9eb1a8" stroke-width="2" opacity=".32">
+ <ellipse cx="700" cy="350" rx="760" ry="330"/>
+ <ellipse cx="700" cy="350" rx="670" ry="285"/>
+ <ellipse cx="700" cy="350" rx="580" ry="240"/>
+ <ellipse cx="700" cy="350" rx="485" ry="195"/>
+</g>
+<g fill="none" stroke="#285b48" stroke-width="5" opacity=".72">
+ <path d="M0 465 C190 400 270 535 450 458 S760 330 930 405 S1190 500 1400 390"/>
+ <path d="M0 510 C180 445 310 570 480 500 S760 395 955 455 S1210 545 1400 450" opacity=".3"/>
+</g>
+<g fill="#285b48">
+ <circle cx="255" cy="454" r="9"/><circle cx="470" cy="451" r="9"/><circle cx="744" cy="369" r="9"/><circle cx="945" cy="408" r="9"/><circle cx="1190" cy="474" r="9"/>
+</g>
+<g fill="#f5f2e9" stroke="#285b48" stroke-width="3">
+ <circle cx="255" cy="454" r="16"/><circle cx="470" cy="451" r="16"/><circle cx="744" cy="369" r="16"/><circle cx="945" cy="408" r="16"/><circle cx="1190" cy="474" r="16"/>
+</g>
+<g fill="#173e31">
+ <path d="M96 108c23-34 59-44 93-32-10 34-35 61-73 61l-17 23-6-31c-10-5-13-12- -?" opacity="0"/>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#173e31">
+ <text x="90" y="105" font-size="48" font-weight="700" letter-spacing="5">KARADAVI</text>
+ <text x="92" y="140" font-size="13" letter-spacing="4" fill="#61736b">THE KNOWLEDGE FOREST</text>
+ <text x="92" y="228" font-size="18" letter-spacing="4" fill="#61736b">A QUIET LIBRARY FOR THE INTERNET</text>
+ <text x="92" y="320" font-size="62" font-weight="700">Understand everything.</text>
+ <text x="92" y="390" font-size="62" font-weight="700">Follow where it <tspan font-style="italic">leads.</tspan></text>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#61736b" font-size="17" letter-spacing="2">
+ <text x="92" y="635">PEOPLE</text><text x="255" y="635">COMPANIES</text><text x="455" y="635">TECHNOLOGY</text><text x="680" y="635">SCIENCE</text><text x="830" y="635">HISTORY</text><text x="1005" y="635">IDEAS</text>
+</g>
+<path d="M0 680 Q260 590 520 680 T1050 680 T1400 660 V720 H0Z" fill="#d4c5a4" opacity=".18"/>
+</svg>
