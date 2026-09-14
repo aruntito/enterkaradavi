@@ -1,14 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
-<title id="title">KARADAVI Knowledge Forest architecture</title><desc id="desc">Canonical entities connected by evidence, provenance, authority and contextual relationships.</desc>
-<rect width="1200" height="520" rx="28" fill="#f7f8f5"/>
-<g fill="none" stroke="#cbd5cf" stroke-width="2"><path d="M70 260 C250 90 390 90 560 260 S870 430 1130 260"/><path d="M70 340 C260 190 390 190 560 340 S880 490 1130 340"/><path d="M70 180 C250 30 390 30 560 180 S880 330 1130 180"/></g>
-<g fill="#fff" stroke="#dce3de" stroke-width="2"><rect x="90" y="205" width="205" height="110" rx="18"/><rect x="345" y="205" width="205" height="110" rx="18"/><rect x="600" y="205" width="205" height="110" rx="18"/><rect x="855" y="205" width="255" height="110" rx="18"/></g>
-<g font-family="Arial,Helvetica,sans-serif" fill="#173e31">
-<text x="115" y="242" font-size="14" font-weight="700" letter-spacing="2">01 / ENTITY</text><text x="115" y="278" font-size="27" font-weight="700">Canonical reality</text>
-<text x="370" y="242" font-size="14" font-weight="700" letter-spacing="2">02 / CONTEXT</text><text x="370" y="278" font-size="27" font-weight="700">Connected meaning</text>
-<text x="625" y="242" font-size="14" font-weight="700" letter-spacing="2">03 / EVIDENCE</text><text x="625" y="278" font-size="27" font-weight="700">Verifiable support</text>
-<text x="880" y="242" font-size="14" font-weight="700" letter-spacing="2">04 / KNOWLEDGE</text><text x="880" y="278" font-size="27" font-weight="700">Machine-readable state</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" role="img" aria-labelledby="title desc">
+<title id="title">KARADAVI Knowledge Forest architecture</title>
+<desc id="desc">A vertical knowledge architecture showing canonical reality, connected context, verifiable evidence and machine-readable knowledge.</desc>
+<rect width="1200" height="980" rx="28" fill="#f7f8f5"/>
+
+<!-- quiet knowledge trails -->
+<g fill="none" stroke="#cbd5cf" stroke-width="2" opacity=".7">
+  <path d="M120 80 C360 180 360 270 600 360 S840 540 1080 650"/>
+  <path d="M1080 80 C840 180 840 270 600 360 S360 540 120 650"/>
+  <path d="M160 220 C390 300 390 390 600 470 S810 650 1040 730" opacity=".55"/>
 </g>
-<g fill="#285b48"><circle cx="295" cy="260" r="6"/><circle cx="550" cy="260" r="6"/><circle cx="805" cy="260" r="6"/></g>
-<g font-family="Arial,Helvetica,sans-serif" fill="#78867f" font-size="13" letter-spacing="2"><text x="90" y="90">THE KNOWLEDGE FOREST</text><text x="905" y="455">EVERGREEN · STRUCTURED · HUMAN-GOVERNED</text></g>
+
+<!-- heading -->
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="90" y="82" font-size="14" letter-spacing="4" fill="#78867f">THE KNOWLEDGE FOREST</text>
+  <text x="90" y="128" font-size="30" font-weight="700" fill="#173e31">How knowledge moves through KARADAVI</text>
+  <text x="90" y="158" font-size="16" letter-spacing="1" fill="#61736b">ENTITY → CONTEXT → EVIDENCE → KNOWLEDGE</text>
+</g>
+
+<!-- 01 -->
+<g>
+  <rect x="180" y="205" width="840" height="125" rx="22" fill="#ffffff" stroke="#dce3de" stroke-width="2"/>
+  <circle cx="235" cy="267" r="25" fill="#285b48"/>
+  <text x="235" y="273" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#ffffff">01</text>
+  <text x="285" y="248" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#78867f">CANONICAL REALITY</text>
+  <text x="285" y="282" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#173e31">A coherent entity</text>
+  <text x="285" y="307" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#61736b">People · companies · technologies · places · ideas</text>
+</g>
+
+<!-- connector -->
+<g fill="none" stroke="#285b48" stroke-width="3" opacity=".65">
+  <path d="M600 330 L600 390"/>
+</g>
+<circle cx="600" cy="390" r="6" fill="#285b48"/>
+
+<!-- 02 -->
+<g>
+  <rect x="180" y="410" width="840" height="125" rx="22" fill="#ffffff" stroke="#dce3de" stroke-width="2"/>
+  <circle cx="235" cy="472" r="25" fill="#486f57"/>
+  <text x="235" y="478" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#ffffff">02</text>
+  <text x="285" y="453" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#78867f">CONNECTED CONTEXT</text>
+  <text x="285" y="487" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#173e31">Meaning through relationships</text>
+  <text x="285" y="512" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#61736b">Who · what · where · when · why</text>
+</g>
+
+<!-- connector -->
+<g fill="none" stroke="#285b48" stroke-width="3" opacity=".65">
+  <path d="M600 535 L600 595"/>
+</g>
+<circle cx="600" cy="595" r="6" fill="#285b48"/>
+
+<!-- 03 -->
+<g>
+  <rect x="180" y="615" width="840" height="125" rx="22" fill="#ffffff" stroke="#dce3de" stroke-width="2"/>
+  <circle cx="235" cy="677" r="25" fill="#d0a96d"/>
+  <text x="235" y="683" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#ffffff">03</text>
+  <text x="285" y="658" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#78867f">VERIFIABLE EVIDENCE</text>
+  <text x="285" y="692" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#173e31">Claims with provenance</text>
+  <text x="285" y="717" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#61736b">Sources · evidence · authority · uncertainty</text>
+</g>
+
+<!-- connector -->
+<g fill="none" stroke="#285b48" stroke-width="3" opacity=".65">
+  <path d="M600 740 L600 800"/>
+</g>
+<circle cx="600" cy="800" r="6" fill="#285b48"/>
+
+<!-- 04 -->
+<g>
+  <rect x="180" y="820" width="840" height="105" rx="22" fill="#173e31"/>
+  <circle cx="235" cy="872" r="25" fill="#f5f2e9"/>
+  <text x="235" y="878" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#173e31">04</text>
+  <text x="285" y="860" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#b9c7c0">MACHINE-READABLE KNOWLEDGE</text>
+  <text x="285" y="895" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#ffffff">Structured state another system can follow</text>
+</g>
+
+<text x="600" y="955" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="3" fill="#78867f">EVERGREEN · STRUCTURED · HUMAN-GOVERNED</text>
 </svg>
