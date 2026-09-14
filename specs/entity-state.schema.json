@@ -2,91 +2,40 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/entity-state.schema.json",
   "title": "KARADAVI Entity State",
-  "description": "Experimental public schema for representing an entity, its claims, evidence, authority context, and uncertainty.",
+  "description": "Experimental v0.1 public envelope for machine-readable entity state.",
   "type": "object",
+  "additionalProperties": false,
   "required": ["id", "type", "state"],
   "properties": {
-    "id": {
-      "type": "string",
-      "minLength": 1
-    },
-    "type": {
-      "type": "string",
-      "enum": ["entity", "source", "event", "artifact"]
-    },
-    "state": {
-      "type": "string",
-      "enum": ["unknown", "ambiguous", "supported", "conflicting", "unsupported", "disproven"]
-    },
-    "label": {
-      "type": "string"
-    },
+    "id": { "type": "string", "minLength": 1 },
+    "type": { "enum": ["entity", "source", "event", "artifact"] },
+    "state": { "enum": ["unknown", "ambiguous", "supported", "conflicting", "unsupported", "disproven"] },
+    "label": { "type": "string" },
     "identifiers": {
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "required": ["value"],
         "properties": {
           "scheme": { "type": "string" },
-          "value": { "type": "string" }
-        },
-        "additionalProperties": false
-      }
-    },
-    "claims": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/claim"
-      }
-    },
-    "provenance": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/provenance"
-      }
-    },
-    "authority": {
-      "type": "object",
-      "properties": {
-        "context": { "type": "string" },
-        "sources": {
-          "type": "array",
-          "items": { "type": "string" }
+          "value": { "type": "string", "minLength": 1 }
         }
-      },
-      "additionalProperties": false
-    }
-  },
-  "$defs": {
-    "claim": {
-      "type": "object",
-      "required": ["id", "predicate"],
-      "properties": {
-        "id": { "type": "string" },
-        "predicate": { "type": "string" },
-        "value": {},
-        "status": {
-          "type": "string",
-          "enum": ["unknown", "ambiguous", "supported", "conflicting", "unsupported", "disproven"]
-        },
-        "evidence": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "additionalProperties": false
+      }
     },
-    "provenance": {
+    "claims": { "type": "array", "items": { "$ref": "claim.schema.json" } },
+    "evidence": { "type": "array", "items": { "$ref": "evidence.schema.json" } },
+    "provenance": { "type": "array", "items": { "$ref": "provenance.schema.json" } },
+    "authority": { "$ref": "authority.schema.json" },
+    "trust_signals": { "type": "array", "items": { "$ref": "trust-signal.schema.json" } },
+    "uncertainty": {
       "type": "object",
-      "required": ["source"],
+      "additionalProperties": false,
       "properties": {
-        "source": { "type": "string" },
-        "observedAt": { "type": "string", "format": "date-time" },
-        "retrievedAt": { "type": "string", "format": "date-time" },
-        "digest": { "type": "string" }
-      },
-      "additionalProperties": false
+        "material": { "type": "boolean" },
+        "types": { "type": "array", "items": { "enum": ["missing", "conflict", "identity", "staleness", "method", "other"] } },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
     }
-  },
-  "additionalProperties": false
+  }
 }
