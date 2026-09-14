@@ -1,0 +1,43 @@
+name: Validate KARADAVI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  json:
+    name: Validate JSON and examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Parse all JSON files
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          function walk(dir) {
+            return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+              const p = path.join(dir, entry.name);
+              return entry.isDirectory() ? walk(p) : [p];
+            });
+          }
+
+          for (const file of walk('.').filter(f => f.endsWith('.json') && !f.includes('node_modules'))) {
+            JSON.parse(fs.readFileSync(file, 'utf8'));
+            console.log(`OK ${file}`);
+          }
+          NODE
+
+      - name: Validate reference instances against schemas
+        run: |
+          npx --yes ajv-cli@5 validate -s specs/entity-state.schema.json -d examples/basic-entity-state.json --spec=draft2020
+          npx --yes ajv-cli@5 validate -s specs/trust-signal.schema.json -d examples/trust-evaluation.json --spec=draft2020
+          echo "KARADAVI v0.1 reference examples validated."
