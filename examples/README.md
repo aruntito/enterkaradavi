@@ -1,30 +1,22 @@
 # Examples
 
-This directory contains small, self-contained examples showing how KARADAVI concepts can be represented or consumed.
+Small, self-contained examples showing how KARADAVI concepts can be represented or consumed.
 
-## Current example
+## Current examples
 
-### `basic-entity-state.json`
+| Example | Demonstrates |
+| --- | --- |
+| `basic-entity-state.json` | Minimal entity state |
+| `conflicting-claims.json` | Preserving competing claims |
+| `provenance-chain.json` | Origin and transformations |
+| `trust-evaluation.json` | A structured evaluation with visible uncertainty |
 
-A minimal machine-readable entity state containing:
+Examples are intentionally synthetic and framework-independent.
 
-- an entity identity;
-- a supported claim;
-- an evidence reference;
-- provenance timestamps; and
-- contextual authority.
+## Validation
 
-Validate the structure against [`../specs/entity-state.schema.json`](../specs/entity-state.schema.json).
+The examples are reference instances for the experimental schemas in [`../specs/`](../specs/). They are not production data and should not be interpreted as normative fixtures until the specification stabilizes.
 
-## What examples should demonstrate
+## Rule
 
-Examples should favor clarity over framework complexity. Useful future examples include:
-
-- competing claims from different sources;
-- provenance chains;
-- contextual authority evaluation;
-- explicit ambiguity and uncertainty;
-- conflicting evidence; and
-- a trust state derived from multiple evidence records.
-
-Examples should remain synthetic or use appropriately public material. Do not place private datasets, credentials, internal service information, or unreleased implementation here.
+Examples should favor clarity over framework complexity and must not contain private datasets, credentials, internal service information, or unreleased implementation details.
