@@ -1,0 +1,23 @@
+{
+  "entity": "entity:example-001",
+  "claims": [
+    {
+      "id": "claim:001",
+      "predicate": "status",
+      "object": "active",
+      "status": "asserted",
+      "evidence_refs": ["evidence:official-record"]
+    },
+    {
+      "id": "claim:002",
+      "predicate": "status",
+      "object": "inactive",
+      "status": "disputed",
+      "evidence_refs": ["evidence:secondary-report"]
+    }
+  ],
+  "resolution": {
+    "disposition": "conflict_present",
+    "note": "The representation preserves both claims rather than silently selecting one."
+  }
+}
