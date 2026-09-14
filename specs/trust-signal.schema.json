@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/trust-signal.schema.json",
+  "title": "KARADAVI Trust Signal",
+  "description": "A structured evaluation of a claim and its supporting context.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_ref", "disposition", "basis", "uncertainty"],
+  "properties": {
+    "claim_ref": { "type": "string", "minLength": 1 },
+    "disposition": { "enum": ["supported", "partially_supported", "disputed", "unsupported", "insufficient_evidence"] },
+    "basis": { "type": "array", "items": { "type": "string" } },
+    "authority_refs": { "type": "array", "items": { "type": "string" } },
+    "evidence_refs": { "type": "array", "items": { "type": "string" } },
+    "uncertainty": { "type": "object", "additionalProperties": true },
+    "evaluated_at": { "type": "string", "format": "date-time" },
+    "method": { "type": "string" }
+  }
+}
