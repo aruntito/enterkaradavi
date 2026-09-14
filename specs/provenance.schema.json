@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/provenance.schema.json",
+  "title": "KARADAVI Provenance",
+  "description": "Origin and transformation metadata for an artifact or derived result.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source"],
+  "properties": {
+    "source": { "type": "string", "minLength": 1 },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "content_digest": { "type": "string" },
+    "parent_refs": { "type": "array", "items": { "type": "string" } },
+    "transformations": { "type": "array", "items": { "type": "string" } }
+  }
+}
