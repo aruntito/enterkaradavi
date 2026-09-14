@@ -1,0 +1,34 @@
+# KARADAVI
+
+> Machine trust, perception, and semantic authority infrastructure.
+
+KARADAVI is an experimental research platform exploring how software can understand digital entities, evaluate evidence, model authority, represent uncertainty, and produce machine-readable trust state.
+
+## Core pipeline
+
+Digital World → Perception → Identification → Semantics → Evidence → Authority → Trust → Machine-readable State
+
+## Core principle
+
+Trust should be inspectable. A trust signal should remain connected to the claim, evidence, provenance, authority context, and uncertainty that produced it.
+
+## Public repository
+
+This repository is the public research and architecture surface. It contains conceptual architecture, research models, public specifications, schemas, examples, and experiments.
+
+## Private boundary
+
+Private implementation, deployment topology, private datasets, credentials, internal endpoints, and unreleased product work are intentionally excluded.
+
+## Key documents
+
+- docs/architecture.md — public conceptual architecture
+- docs/research-model.md — research model for evidence, provenance, authority, and uncertainty
+- docs/public-private-boundary.md — publication boundary
+- specs/entity-state.schema.json — experimental entity-state schema
+- research/001-trust-is-not-a-score.md — initial trust-model hypothesis
+- examples/basic-entity-state.json — basic machine-readable example
+
+## Status
+
+Active research / early specification. Terminology and schemas may change as experiments are conducted.
