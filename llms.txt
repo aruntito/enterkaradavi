@@ -8,26 +8,37 @@ KARADAVI is an experimental research platform exploring how software can underst
 
 Digital World → Perception → Identification → Semantics → Evidence → Authority → Trust → Machine-readable State
 
+## Public v0.1 model
+
+Entity → Claim → Evidence → Provenance + Authority Context + Uncertainty → Trust Signal → Machine-readable State
+
 ## Core principle
 
 Trust should be inspectable. A trust signal should remain connected to the claim, evidence, provenance, authority context, and uncertainty that produced it.
 
 ## Public repository
 
-This repository is the public research and architecture surface. It contains conceptual architecture, research models, public specifications, schemas, examples, and experiments.
+This repository is the public research and architecture surface. It contains conceptual architecture, terminology, design principles, threat modeling, public specifications, schemas, examples, and experiments.
+
+## Specification files
+
+- specs/entity-state.schema.json
+- specs/claim.schema.json
+- specs/evidence.schema.json
+- specs/provenance.schema.json
+- specs/authority.schema.json
+- specs/trust-signal.schema.json
+
+## Research files
+
+- research/001-trust-is-not-a-score.md
+- research/002-contextual-authority.md
+- research/003-uncertainty-propagation.md
+- research/004-entity-resolution.md
 
 ## Private boundary
 
 Private implementation, deployment topology, private datasets, credentials, internal endpoints, and unreleased product work are intentionally excluded.
-
-## Key documents
-
-- docs/architecture.md — public conceptual architecture
-- docs/research-model.md — research model for evidence, provenance, authority, and uncertainty
-- docs/public-private-boundary.md — publication boundary
-- specs/entity-state.schema.json — experimental entity-state schema
-- research/001-trust-is-not-a-score.md — initial trust-model hypothesis
-- examples/basic-entity-state.json — basic machine-readable example
 
 ## Status
 
