@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aruntito/enterkaradavi/blob/main/specs/relation.schema.json",
+  "title": "KARADAVI Relation",
+  "description": "An explicit directed relationship between two referenced resources.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "subject", "predicate", "object"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "subject": { "type": "string", "minLength": 1 },
+    "predicate": { "type": "string", "minLength": 1 },
+    "object": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["asserted", "disputed", "retracted", "unknown"] },
+    "context": { "type": "object", "additionalProperties": true },
+    "evidence_refs": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "provenance_refs": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}
