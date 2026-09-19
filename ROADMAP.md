@@ -8,10 +8,11 @@ KARADAVI is being developed as a public research surface first and an implementa
 - [x] Research model
 - [x] Public/private boundary
 - [x] Entity-state schema
-- [x] Claim, evidence, provenance, authority, and trust schemas
+- [x] Claim, relation, evidence, provenance, authority, and trust schemas
 - [x] Reference examples
 - [x] Automated validation
 - [x] Contribution and security guidance
+- [x] Public specification document
 
 ## v0.2 — Research depth
 
@@ -21,6 +22,7 @@ KARADAVI is being developed as a public research surface first and an implementa
 - [ ] Define contextual authority relationships
 - [ ] Study uncertainty propagation
 - [ ] Establish entity-resolution evaluation cases
+- [ ] Define relation semantics and inverse relationship rules
 
 ## v0.3 — Reproducible experiments
 
@@ -28,6 +30,7 @@ KARADAVI is being developed as a public research surface first and an implementa
 - [ ] Authority-context evaluation set
 - [ ] Uncertainty propagation experiments
 - [ ] Entity-resolution stress cases
+- [ ] Claim lifecycle timeline benchmark
 - [ ] Document failure modes and negative results
 
 ## v0.4 — Interoperability
