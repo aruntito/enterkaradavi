@@ -1,0 +1,10 @@
+{
+  "id": "relation:acme-founded-by-tito",
+  "subject": "entity:example-acme",
+  "predicate": "founded_by",
+  "object": "person:example-tito",
+  "status": "asserted",
+  "context": { "domain": "organization-history" },
+  "evidence_refs": ["evidence:example-registry-001"],
+  "provenance_refs": ["provenance:example-registry-001"]
+}
