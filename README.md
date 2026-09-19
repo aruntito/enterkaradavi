@@ -70,7 +70,7 @@ Claims should retain the evidence and provenance needed to understand where they
 
 The same structured model that helps a human follow a trail can also give software a clearer representation of the world.
 
-**[Explore the architecture →](docs/architecture.md)**
+**[Explore the architecture →](docs/architecture.md)** · **[Read the public specification →](docs/specification.md)**
 
 ---
 
@@ -80,40 +80,42 @@ KARADAVI keeps knowledge components explicit instead of collapsing everything in
 
 ```text
                          ENTITY
-                           │
-              ┌────────────┼────────────┐
-              │            │            │
-              ▼            ▼            ▼
+                           |
+              +------------+------------+
+              |            |            |
+              v            v            v
             CLAIM       CONTEXT      RELATION
-              │            │            │
-              └────────────┼────────────┘
-                           ▼
+              |            |            |
+              +------------+------------+
+                           |
+                           v
                         EVIDENCE
-                           │
-                           ▼
+                           |
+                           v
                        PROVENANCE
-                           │
-                           ▼
+                           |
+                           v
                     AUTHORITY CONTEXT
-                           │
-                           ▼
+                           |
+                           v
                        UNCERTAINTY
-                           │
-                           ▼
+                           |
+                           v
                     TRUST SIGNAL
-                           │
-                           ▼
+                           |
+                           v
                   MACHINE-READABLE STATE
 ```
 
 ### v0.1 specification surface
 
-- `entity-state.schema.json` — structured entity state
-- `claim.schema.json` — atomic propositions
-- `evidence.schema.json` — supporting and weakening material
-- `provenance.schema.json` — origin and transformation context
-- `authority.schema.json` — contextual standing
-- `trust-signal.schema.json` — structured evaluation
+- entity-state.schema.json — structured entity state
+- claim.schema.json — atomic propositions
+- relation.schema.json — explicit directed relationships
+- evidence.schema.json — supporting and weakening material
+- provenance.schema.json — origin and transformation context
+- authority.schema.json — contextual standing
+- trust-signal.schema.json — structured evaluation
 
 **[Browse the specifications →](specs/)**
 
@@ -139,6 +141,10 @@ How should uncertainty travel when one claim is derived from several others?
 
 How should ambiguous identity affect the knowledge graph and everything downstream of it?
 
+### 005 / CLAIM LIFECYCLE
+
+How should changing, disputed, stale, and retracted claims retain their history without confusing representation state with truth?
+
 **[Open the research notebook →](research/)**
 
 ---
@@ -149,7 +155,7 @@ Think of the public repository as **the forest's underlying map**.
 
 It contains:
 
-`ARCHITECTURE` · `TERMINOLOGY` · `DESIGN PRINCIPLES` · `RESEARCH` · `SCHEMAS` · `EXAMPLES` · `THREAT MODEL` · `PUBLIC / PRIVATE BOUNDARY`
+**ARCHITECTURE · TERMINOLOGY · SPECIFICATION · DESIGN PRINCIPLES · RESEARCH · SCHEMAS · EXAMPLES · THREAT MODEL · PUBLIC / PRIVATE BOUNDARY**
 
 The live product is the editorial experience.
 
@@ -161,36 +167,40 @@ The repository makes the underlying model inspectable.
 
 ```text
 enterkaradavi/
-│
-├── docs/                 Knowledge architecture + design language
-│   ├── architecture.md
-│   ├── terminology.md
-│   ├── design-principles.md
-│   ├── research-model.md
-│   ├── threat-model.md
-│   └── public-private-boundary.md
-│
-├── specs/                Machine-readable public contracts
-│   ├── entity-state.schema.json
-│   ├── claim.schema.json
-│   ├── evidence.schema.json
-│   ├── provenance.schema.json
-│   ├── authority.schema.json
-│   └── trust-signal.schema.json
-│
-├── research/             Experiments + hypotheses
-│   ├── 001-trust-is-not-a-score.md
-│   ├── 002-contextual-authority.md
-│   ├── 003-uncertainty-propagation.md
-│   └── 004-entity-resolution.md
-│
-├── examples/             Synthetic reference states
-│   ├── basic-entity-state.json
-│   ├── conflicting-claims.json
-│   ├── provenance-chain.json
-│   └── trust-evaluation.json
-│
-└── assets/               KARADAVI visual language
+|
++-- docs/                 Knowledge architecture + design language
+|   +-- architecture.md
+|   +-- specification.md
+|   +-- terminology.md
+|   +-- design-principles.md
+|   +-- research-model.md
+|   +-- threat-model.md
+|   +-- public-private-boundary.md
+|
++-- specs/                Machine-readable public contracts
+|   +-- entity-state.schema.json
+|   +-- claim.schema.json
+|   +-- relation.schema.json
+|   +-- evidence.schema.json
+|   +-- provenance.schema.json
+|   +-- authority.schema.json
+|   +-- trust-signal.schema.json
+|
++-- research/             Experiments + hypotheses
+|   +-- 001-trust-is-not-a-score.md
+|   +-- 002-contextual-authority.md
+|   +-- 003-uncertainty-propagation.md
+|   +-- 004-entity-resolution.md
+|   +-- 005-claim-lifecycle.md
+|
++-- examples/             Synthetic reference states
+|   +-- basic-entity-state.json
+|   +-- relation-example.json
+|   +-- conflicting-claims.json
+|   +-- provenance-chain.json
+|   +-- trust-evaluation.json
+|
++-- assets/               KARADAVI visual language
 ```
 
 ---
