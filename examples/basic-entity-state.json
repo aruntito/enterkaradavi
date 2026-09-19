@@ -4,29 +4,36 @@
   "label": "Example Organization",
   "state": "supported",
   "identifiers": [
-    {
-      "scheme": "example",
-      "value": "acme-001"
-    }
+    { "scheme": "example", "value": "acme-001" }
   ],
   "claims": [
     {
       "id": "claim:example-acme:name",
+      "subject": "entity:example-acme",
       "predicate": "name",
-      "value": "Example Organization",
-      "status": "supported",
-      "evidence": ["evidence:example-registry-001"]
+      "object": "Example Organization",
+      "status": "asserted"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:example-registry-001",
+      "kind": "record",
+      "supports": ["claim:example-acme:name"],
+      "content_ref": "https://example.org/registry/acme-001",
+      "observed_at": "2026-09-14T00:00:00Z"
     }
   ],
   "provenance": [
     {
       "source": "https://example.org/registry/acme-001",
-      "observedAt": "2026-09-14T00:00:00Z",
-      "retrievedAt": "2026-09-14T00:01:00Z"
+      "retrieved_at": "2026-09-14T00:01:00Z"
     }
   ],
-  "authority": {
-    "context": "example organization registry",
-    "sources": ["https://example.org/registry"]
+  "trust_signals": [],
+  "uncertainty": {
+    "material": false,
+    "types": [],
+    "notes": []
   }
 }
