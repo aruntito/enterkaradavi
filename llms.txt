@@ -1,8 +1,8 @@
 # KARADAVI
 
-> Machine trust, perception, and semantic authority infrastructure.
+> The Knowledge Forest — structured, connected, evidence-aware knowledge with human editorial authority.
 
-KARADAVI is an experimental research platform exploring how software can understand digital entities, evaluate evidence, model authority, represent uncertainty, and produce machine-readable trust state.
+KARADAVI is a knowledge platform and public research project exploring how software can represent connected entities, claims, evidence, provenance, contextual authority, uncertainty, and machine-readable knowledge while preserving human editorial authority.
 
 ## Core pipeline
 
@@ -12,9 +12,11 @@ Digital World → Perception → Identification → Semantics → Evidence → A
 
 Entity → Claim → Evidence → Provenance + Authority Context + Uncertainty → Trust Signal → Machine-readable State
 
-## Core principle
+## Core principles
 
 Trust should be inspectable. A trust signal should remain connected to the claim, evidence, provenance, authority context, and uncertainty that produced it.
+
+AI may assist extraction and drafting, but publication remains a human editorial decision.
 
 ## Public repository
 
@@ -28,6 +30,7 @@ This repository is the public research and architecture surface. It contains con
 - specs/provenance.schema.json
 - specs/authority.schema.json
 - specs/trust-signal.schema.json
+- specs/relation.schema.json
 
 ## Research files
 
@@ -35,6 +38,11 @@ This repository is the public research and architecture surface. It contains con
 - research/002-contextual-authority.md
 - research/003-uncertainty-propagation.md
 - research/004-entity-resolution.md
+- research/005-claim-lifecycle.md
+
+## Product direction
+
+The current private implementation includes a canonical entity engine, ten knowledge domains, structured extraction and drafting, human editorial review, public entity experiences, PWA foundations, and ongoing knowledge-graph work. Private implementation details are intentionally excluded from this repository.
 
 ## Private boundary
 
@@ -42,4 +50,4 @@ Private implementation, deployment topology, private datasets, credentials, inte
 
 ## Status
 
-Active research / early specification. Terminology and schemas may change as experiments are conducted.
+Active product development / active research / experimental v0.1 specification. Terminology and schemas may change as experiments are conducted.
