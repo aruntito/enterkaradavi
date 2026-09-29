@@ -31,3 +31,22 @@ KARADAVI records important public design decisions here so that future changes h
 **Decision:** Public schemas and terminology remain experimental until evidence justifies promotion.
 
 **Reason:** Version numbers and repository activity are not substitutes for validation.
+
+
+## ADR-006 — AI assistance does not imply publication authority
+
+**Decision:** Automated systems may extract, normalize, compare, structure, and draft knowledge, but publication requires an explicit human editorial decision.
+
+**Reason:** Generative output and extracted data can be useful intermediate artifacts without being treated as accepted public knowledge. Keeping the boundary explicit makes provenance clearer and reduces the risk of silently promoting machine output into editorial fact.
+
+## ADR-007 — Editorial state and epistemic state are separate
+
+**Decision:** Whether content is draft, reviewed, approved, or published must remain conceptually separate from whether an underlying claim is supported, disputed, uncertain, or disproven.
+
+**Reason:** Publication is a workflow decision. Evidence status is an epistemic property. Collapsing them would make a published statement appear automatically true or an unpublished statement automatically false.
+
+## ADR-008 — Knowledge domains organize discovery, not ontology
+
+**Decision:** The ten public knowledge domains are navigation and editorial organization surfaces, not hard ontological boundaries.
+
+**Reason:** Real entities cross categories. A person can connect to a company, technology, place, historical event, and concept. The graph should preserve those cross-domain relationships rather than forcing knowledge into isolated silos.
