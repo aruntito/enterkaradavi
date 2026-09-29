@@ -4,6 +4,14 @@ All notable public changes to KARADAVI are recorded here.
 
 ## [Unreleased]
 
+### Product progress sync — 2026-09-29
+- Documented the current 10-domain knowledge taxonomy.
+- Documented the canonical entity engine and entity-type normalization work.
+- Added the current assisted editorial pipeline: extraction → structured draft data → AI-assisted drafting → human review → publication.
+- Made the editorial invariant explicit: **AI never publishes.**
+- Documented admin/public surface separation, PWA foundations, origin-story experience, and knowledge-graph direction.
+- Updated the roadmap to distinguish private product progress from public specification maturity.
+
 ### Added
 - Public v0.1 conceptual architecture and research model.
 - Public specification document describing resource, reference, temporal, conflict, and evaluation semantics.
