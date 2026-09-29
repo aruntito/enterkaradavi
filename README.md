@@ -70,7 +70,7 @@ Claims should retain the evidence and provenance needed to understand where they
 
 The same structured model that helps a human follow a trail can also give software a clearer representation of the world.
 
-**[Explore the architecture →](docs/architecture.md)** · **[Read the public specification →](docs/specification.md)**
+**[Explore the architecture →](docs/architecture.md)** · **[Read the editorial model →](docs/editorial-model.md)** · **[Read the public specification →](docs/specification.md)**
 
 ---
 
@@ -170,6 +170,7 @@ enterkaradavi/
 |
 +-- docs/                 Knowledge architecture + design language
 |   +-- architecture.md
+|   +-- editorial-model.md
 |   +-- specification.md
 |   +-- terminology.md
 |   +-- design-principles.md
