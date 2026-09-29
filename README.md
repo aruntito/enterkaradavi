@@ -24,7 +24,7 @@ It explores how knowledge can remain **structured, connected, verifiable, and un
 
 <div align="center">
 
-### PEOPLE · COMPANIES · TECHNOLOGY · SCIENCE · HISTORY · IDEAS · PLACES
+### PEOPLE · COMPANIES · TECHNOLOGY · SCIENCE · SPACE · CONCEPTS · HISTORY · PLACES · NATURE & EARTH · SOCIETY & CULTURE
 
 </div>
 
@@ -224,11 +224,60 @@ The public repository is intentionally a **research surface**, not a mirror of t
 
 ---
 
+## CURRENT PRODUCT PROGRESS
+
+The private KARADAVI implementation has moved beyond the initial foundation into an editorial knowledge system built around a strict rule:
+
+> **AI can assist research and drafting. AI never gets publication authority.**
+
+The current implementation surface includes:
+
+- **10 canonical knowledge domains:** Companies, People, Technology, Science, Space, Concepts, History, Places, Nature & Earth, and Society & Culture.
+- **Entity engine:** canonical entity types, normalized routing, structured entity pages, and relationship-ready data.
+- **Editorial CMS workflow:** extracted source material becomes structured draft data before human review and approval.
+- **Assisted extraction pipeline:** source input → structured extraction → draft generation → editorial review → publication.
+- **Admin and public surfaces:** editorial tooling and the public knowledge experience are developed as separate concerns.
+- **Knowledge graph direction:** entities and explicit relations are being designed to form traversable knowledge trails rather than isolated articles.
+- **Progressive web app support:** the public experience includes installable PWA foundations.
+- **Origin-story experience:** KARADAVI's origin and the idea behind the Knowledge Forest are being preserved as part of the product's public identity.
+
+The public repository intentionally documents the concepts, schemas, research questions, and architecture behind these ideas without mirroring proprietary implementation details.
+
+---
+
+## EDITORIAL PIPELINE
+
+```text
+SOURCE MATERIAL
+      |
+      v
+STRUCTURED EXTRACTION
+      |
+      v
+CANONICAL DRAFT DATA
+      |
+      v
+AI-ASSISTED DRAFT
+      |
+      v
+HUMAN EDITORIAL REVIEW
+      |
+      v
+APPROVED PUBLICATION
+      |
+      v
+CONNECTED KNOWLEDGE GRAPH
+```
+
+The boundary is deliberate: **automation may prepare knowledge; a human editor decides what becomes published knowledge.**
+
+---
+
 ## STATUS
 
-**ACTIVE RESEARCH · EARLY SPECIFICATION · v0.1**
+**ACTIVE DEVELOPMENT · ACTIVE RESEARCH · EXPERIMENTAL SPECIFICATION · v0.1**
 
-The terminology and schemas are experimental. Machine-readable does not mean finalized. New evidence may change the model.
+The product implementation, editorial model, and public research specification are evolving in parallel. The terminology and schemas remain experimental; machine-readable does not mean finalized, and implementation progress does not imply specification stability.
 
 ---
 
