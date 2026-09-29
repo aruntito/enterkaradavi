@@ -1,8 +1,38 @@
 # KARADAVI Roadmap
 
-KARADAVI is being developed as a public research surface first and an implementation surface second.
+KARADAVI is being developed as two connected surfaces: a private product implementation and a public research/specification layer. The public repository documents the model without exposing proprietary implementation details.
 
-## v0.1 — Foundation
+## Product progress snapshot — September 2026
+
+- [x] Project foundation
+- [x] Core database foundation
+- [x] Canonical entity engine
+- [x] Expanded taxonomy to 10 knowledge domains
+- [x] Assisted source extraction pipeline
+- [x] Canonical structured draft storage
+- [x] AI-assisted drafting with human publication authority
+- [x] Admin/editorial workflow foundations
+- [x] Public entity experience foundations
+- [x] Entity type alias normalization
+- [x] PWA install foundations
+- [x] Origin-story experience
+- [ ] Deepen CMS/editorial workflow
+- [ ] Expand entity relationships
+- [ ] Build out knowledge graph traversal
+- [ ] Harden provenance, evidence, and claim lifecycle semantics
+- [ ] Production hardening and editorial QA
+
+### Knowledge domains
+
+Companies · People · Technology · Science · Space · Concepts · History · Places · Nature & Earth · Society & Culture
+
+### Editorial invariant
+
+> **AI never publishes.**
+
+Automation may extract, normalize, structure, and draft. Publication remains an explicit human editorial decision.
+
+## Public specification v0.1 — Foundation
 
 - [x] Public architecture
 - [x] Research model
@@ -23,6 +53,7 @@ KARADAVI is being developed as a public research surface first and an implementa
 - [ ] Study uncertainty propagation
 - [ ] Establish entity-resolution evaluation cases
 - [ ] Define relation semantics and inverse relationship rules
+- [ ] Align public research primitives with lessons from the editorial implementation
 
 ## v0.3 — Reproducible experiments
 
