@@ -1,53 +1,65 @@
-# KARADAVI
+# KARADAVI — The Knowledge Forest
 
-> The Knowledge Forest — structured, connected, evidence-aware knowledge with human editorial authority.
+> Connected, evidence-aware knowledge with human editorial authority.
 
-KARADAVI is a knowledge platform and public research project exploring how software can represent connected entities, claims, evidence, provenance, contextual authority, uncertainty, and machine-readable knowledge while preserving human editorial authority.
+KARADAVI is a knowledge platform for exploring people, companies, technology, science, space, concepts, history, places, nature and earth, and society and culture through the relationships between them.
 
-## Core pipeline
+## Core idea
 
-Digital World → Perception → Identification → Semantics → Evidence → Authority → Trust → Machine-readable State
+Every page is a starting point. Every connection leads somewhere.
 
-## Public v0.1 model
+KARADAVI treats knowledge as a connected forest rather than a collection of isolated pages. Entities establish subjects. Relationships form trails. Claims, evidence, provenance, authority, and uncertainty preserve context.
 
-Entity → Claim → Evidence → Provenance + Authority Context + Uncertainty → Trust Signal → Machine-readable State
+## Knowledge domains
 
-## Core principles
+People · Companies · Technology · Science · Space · Concepts · History · Places · Nature & Earth · Society & Culture
 
-Trust should be inspectable. A trust signal should remain connected to the claim, evidence, provenance, authority context, and uncertainty that produced it.
+These are discovery entrances rather than hard ontological boundaries.
 
-AI may assist extraction and drafting, but publication remains a human editorial decision.
+## Public principles
+
+- Connected knowledge over isolated facts.
+- Provenance over opaque assertion.
+- Uncertainty over false precision.
+- Context over universal rankings.
+- Human publication authority.
+- Trails over dead ends.
+
+## Editorial principle
+
+Knowledge is automatic. Writing is intentional. Publishing is human.
+
+AI and software may assist research, organization, extraction, relationship discovery, and writing. They do not receive publication authority.
+
+## Public knowledge model
+
+Entity → Claim → Evidence → Provenance + Authority + Uncertainty → Evaluation
+
+Entity → Relationship → Entity
+
+The model is experimental and intended to keep important distinctions inspectable.
+
+## Start here
+
+- README.md
+- docs/about.md
+- docs/the-forest.md
+- docs/knowledge-model.md
+- docs/editorial-model.md
+- docs/origin.md
+- docs/terminology.md
+- docs/design-principles.md
+- docs/specification.md
+- research/
+- specs/
+- examples/
 
 ## Public repository
 
-This repository is the public research and architecture surface. It contains conceptual architecture, terminology, design principles, threat modeling, public specifications, schemas, examples, and experiments.
+This repository explains KARADAVI's public ideas, philosophy, knowledge model, editorial principles, research, terminology, and experimental specifications.
 
-## Specification files
-
-- specs/entity-state.schema.json
-- specs/claim.schema.json
-- specs/evidence.schema.json
-- specs/provenance.schema.json
-- specs/authority.schema.json
-- specs/trust-signal.schema.json
-- specs/relation.schema.json
-
-## Research files
-
-- research/001-trust-is-not-a-score.md
-- research/002-contextual-authority.md
-- research/003-uncertainty-propagation.md
-- research/004-entity-resolution.md
-- research/005-claim-lifecycle.md
-
-## Product direction
-
-The current private implementation includes a canonical entity engine, ten knowledge domains, structured extraction and drafting, human editorial review, public entity experiences, PWA foundations, and ongoing knowledge-graph work. Private implementation details are intentionally excluded from this repository.
-
-## Private boundary
-
-Private implementation, deployment topology, private datasets, credentials, internal endpoints, and unreleased product work are intentionally excluded.
+It is not a source-code mirror or public engineering-status dashboard.
 
 ## Status
 
-Active product development / active research / experimental v0.1 specification. Terminology and schemas may change as experiments are conducted.
+KARADAVI is an evolving knowledge platform and active public research project. Public schemas and terminology are experimental and may change as the ideas are tested.
