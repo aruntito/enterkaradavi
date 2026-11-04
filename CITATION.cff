@@ -1,20 +1,23 @@
 cff-version: 1.2.0
-title: "KARADAVI"
+title: "KARADAVI — The Knowledge Forest"
 type: software
-abstract: "Experimental research infrastructure for machine trust, perception, semantic authority, evidence, provenance, uncertainty, and machine-readable state."
+abstract: "Public research and experimental specifications for KARADAVI, an open knowledge platform designed as a continuously evolving, entity-centered and knowledge-graph-first institution. The research explores canonical identity, extensible knowledge representation, claims, relationships, evidence, provenance, contextual authority, uncertainty, source reconciliation, revisions, and human-governed editorial publication."
 repository-code: "https://github.com/aruntito/enterkaradavi"
-url: "https://github.com/aruntito/enterkaradavi"
+url: "https://www.karadavi.com"
 license: MIT
 keywords:
-  - machine-trust
-  - perception
-  - semantic-authority
-  - provenance
-  - entity-resolution
-  - uncertainty
+  - open-knowledge
+  - knowledge-graph
   - knowledge-representation
-  - ai-infrastructure
+  - canonical-entities
+  - entity-resolution
+  - evidence
+  - provenance
+  - source-reconciliation
+  - uncertainty
+  - editorial-governance
+  - machine-readable-knowledge
 authors:
-  - family-names: TITO
+  - family-names: Dharavath
     given-names: Arun
     affiliation: "KARADAVI"
