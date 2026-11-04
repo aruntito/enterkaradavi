@@ -201,7 +201,9 @@ This distinction is fundamental to the project, not a temporary technical limita
 
 ## THE PUBLIC RESEARCH
 
-This repository is the open research and documentation companion to KARADAVI.
+This repository is KARADAVI's **public research and specification project**. It publishes the concepts, research notes, experimental schemas, reference examples, and documentation that can be independently inspected and discussed.
+
+It is intentionally separate from the private KARADAVI product implementation. This repository does **not** publish the private product source code, private datasets, deployment configuration, internal infrastructure, or unreleased product work. The public/private boundary is documented in [docs/public-private-boundary.md](docs/public-private-boundary.md). The current state of this public research surface is tracked in [docs/project-status.md](docs/project-status.md), and its research questions are described in [docs/research-program.md](docs/research-program.md).
 
 It explores questions such as:
 
