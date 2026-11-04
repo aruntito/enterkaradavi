@@ -1,14 +1,14 @@
 # The Knowledge Forest
 
-KARADAVI uses the forest as both a metaphor and an information model.
+KARADAVI uses the forest as both a metaphor and a way to think about connected knowledge.
 
-A forest contains individual things, but its character emerges from relationships: roots, paths, layers, dependencies, histories, and ecosystems.
+A forest contains individual things, but its character emerges from relationships: roots, paths, layers, dependencies, histories and ecosystems.
 
 Knowledge behaves similarly.
 
-## Ten entrances
+## Ten discovery trails
 
-KARADAVI currently organizes exploration around ten broad domains:
+The initial discovery experience is organized around ten broad trails:
 
 1. **People**
 2. **Companies**
@@ -21,23 +21,27 @@ KARADAVI currently organizes exploration around ten broad domains:
 9. **Nature & Earth**
 10. **Society & Culture**
 
-These domains help people enter the forest. They are not hard boundaries around reality.
+These trails help readers enter the forest. They are not hard boundaries around reality, a complete ontology or a limit on future knowledge coverage.
 
-A scientist can belong in People while connecting to Science, a university, a city, a historical period, technologies, and concepts. A space mission can connect to companies, agencies, people, places, scientific discoveries, and technologies.
+A scientist can be represented as a person while connecting to science, a university, a city, a historical period, technologies and concepts. A space mission can connect to companies, agencies, people, places, scientific discoveries and technologies.
 
-## Entities
+## Extensible ontology
+
+The underlying knowledge model must support new entity types, subtypes, relationships and contexts as the institution grows.
+
+The ten trails are navigation and discovery groupings over that model. They should not force every entity into one exclusive category or require a taxonomy redesign whenever a new kind of subject is introduced.
+
+## Canonical entities
 
 An entity is a distinct subject represented in KARADAVI.
 
-The entity gives a trail somewhere stable to begin.
-
-Identity matters because relationships become unreliable when the system does not know what they connect. At the same time, KARADAVI's public research recognizes that identity can be ambiguous and should not always be forced into certainty.
+Canonical identity gives the forest stable points to connect. Source records and aliases can refer to the same entity, but identity resolution is an inference and can remain ambiguous. The system should preserve unresolved candidates rather than silently merge different subjects.
 
 ## Relationships
 
 Relationships turn a catalog into a forest.
 
-A relationship can connect entities through ideas such as:
+Examples include:
 
 - founded by
 - developed by
@@ -49,11 +53,11 @@ A relationship can connect entities through ideas such as:
 - succeeded by
 - related to
 
-The vocabulary can grow, but relationships should remain meaningful rather than becoming decorative links.
+Relationships should be meaningful, typed and contextual rather than decorative links. Where appropriate, they should be supported by claims, evidence and provenance.
 
 ## Trails
 
-A knowledge trail is a sequence of meaningful connections.
+A knowledge trail is a sequence of meaningful connections:
 
 ```text
 Person
@@ -67,22 +71,16 @@ Scientific work
 Societal change
 ```
 
-A trail is not required to stay inside one domain.
-
-That is the point.
+A trail is not required to stay inside one domain. That is the point.
 
 ## Context lives between things
 
-An isolated fact can be correct while still being difficult to understand.
-
-Knowing who founded a company is useful. Understanding what they built, what influenced it, where it happened, which technologies made it possible, and what followed gives the fact context.
+An isolated fact can be correct while still being difficult to understand. Knowing who founded a company is useful. Understanding what they built, what influenced it, where it happened, which technologies made it possible and what followed gives the fact context.
 
 KARADAVI aims to make that surrounding structure explorable.
 
 ## No forced path
 
-The forest should not dictate one reading order.
-
-A reader can enter through a person, place, company, scientific concept, historical event, or any other represented entity and follow the connections that matter to them.
+The forest should not dictate one reading order. A reader can enter through a person, place, company, scientific concept, historical event or any other represented entity and follow the connections that matter to them.
 
 > The page establishes the subject. The forest provides the context.
