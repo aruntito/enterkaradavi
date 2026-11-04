@@ -1,159 +1,138 @@
 # KARADAVI Architecture
 
-KARADAVI explores a trust-oriented perception architecture for software systems that need to reason about digital entities, claims, sources, and evidence.
+KARADAVI's product direction is an open, continuously evolving knowledge platform built around canonical entities and an interconnected knowledge graph. Its public architecture research describes the semantic responsibilities required to move from distributed source material to inspectable, human-approved knowledge.
 
-## System model
+This document describes conceptual boundaries, not private services or deployment topology.
 
-```text
-Digital World
-      │
-      ▼
-┌─────────────┐
-│ Perception  │  observe artifacts, events, sources
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│Identification│ resolve candidate entities
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│  Semantics  │ interpret meaning and relationships
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│   Evidence  │ connect claims to observations
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│  Authority  │ evaluate contextual source standing
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│    Trust    │ derive an inspectable treatment signal
-└──────┬──────┘
-       ▼
-┌─────────────┐
-│ Machine State│ expose structured downstream state
-└─────────────┘
-```
+## Two complementary views
 
-The layers are conceptual boundaries, not necessarily separate services. A future implementation may combine, split, cache, or reorder parts of the pipeline while preserving the semantic model.
+KARADAVI has two connected architectural concerns:
 
-## 1. Perception
+1. **Knowledge institution:** the public-facing experience through which readers explore entities, explanations and trails.
+2. **Knowledge stewardship:** the research, ingestion, identity, evidence, reconciliation and editorial processes that maintain the knowledge behind that experience.
 
-The system observes an input: a document, page, API response, entity, statement, event, image-derived fact, or other digital artifact.
+The reader-facing page is a representation of the underlying connected state, not the source of truth for every claim.
 
-**Question:** what is present?
-
-A perception record should retain enough source context to make later interpretation traceable.
-
-## 2. Identification
-
-Observed material is mapped to one or more candidate entities, concepts, sources, or event identities.
-
-**Question:** what entity might this be?
-
-Identity should support ambiguity. If two candidates are plausible, the system should be able to represent both rather than silently selecting one.
-
-## 3. Semantics
-
-The system represents attributes, relationships, types, meanings, and context in a form that downstream components can reason about.
-
-**Question:** what does this represent here?
-
-Semantic interpretation should distinguish the underlying observation from an interpretation derived from it.
-
-## 4. Evidence
-
-Claims are connected to supporting observations or sources.
-
-**Question:** what supports this claim?
-
-Evidence should preserve provenance. A derived value without a recoverable basis is weaker than a value whose supporting chain can be inspected.
-
-## 5. Authority
-
-Different sources can have different standing for different claims and contexts.
-
-**Question:** who or what has standing to establish this fact here?
-
-Authority is therefore modeled as contextual. A source can be authoritative for one class of claim without being universally authoritative.
-
-## 6. Trust
-
-Trust is a structured interpretation of available evidence, provenance, authority, consistency, uncertainty, and context.
-
-**Question:** how should a consuming system treat this information?
-
-KARADAVI deliberately avoids treating trust as a universal scalar. A consuming system may need to know *why* a signal exists, not merely its final value.
-
-## 7. Machine-readable state
-
-The output should be consumable by other software without requiring the original human interpretation to be repeated.
-
-A useful state can expose:
-
-- subject or entity identity;
-- claim or observation;
-- evidence references;
-- provenance;
-- authority context;
-- uncertainty;
-- evaluation status; and
-- derived treatment signals.
-
-## Evidence flow
-
-The intended reasoning path is:
+## Knowledge lifecycle
 
 ```text
-Observation
-    ↓
-Evidence Record
-    ↓
-Claim
-    ↓
-Contextual Evaluation
-    ↓
-Trust Signal
-    ↓
-Machine-readable State
+Distributed sources and research material
+                 |
+                 v
+        Discovery / retrieval
+                 |
+                 v
+         Observation / extraction
+                 |
+                 v
+       Normalization / identification
+                 |
+                 v
+     Canonical entities and relationships
+                 |
+                 v
+       Claims + evidence + provenance
+                 |
+                 v
+       Reconciliation / evaluation
+                 |
+                 v
+          Editorial preparation
+                 |
+                 v
+          HUMAN APPROVAL GATE
+                 |
+                 v
+       Published knowledge state
+                 |
+                 v
+       Reader experience / graph
+                 |
+                 v
+      Monitoring and update proposals
+                 └──────────────────↺
 ```
 
-The system should be able to move backwards through the chain when investigating a result.
+The lifecycle is a conceptual model. Implementations may combine, split, cache or reorder technical components while preserving the semantic distinctions and human publication gate.
 
-## Conflict handling
+## 1. Source discovery and perception
 
-Conflicting information should remain representable.
+The system identifies candidate material from publications, datasets, registries, research repositories, archives, APIs and other sources.
 
-```text
-                 ┌─ Claim A ─ Evidence A
-Subject ─────────┤
-                 └─ Claim B ─ Evidence B
-```
+**Question:** what material may be relevant, and where did it originate?
 
-KARADAVI does not assume that disagreement should immediately be averaged away. Conflict can itself be meaningful state and may require contextual evaluation.
+Discovery is not acceptance. A retrieved source is a candidate input whose identity, context, suitability and limitations must remain inspectable.
 
-## Uncertainty model
+## 2. Observation and extraction
 
-Unknown, ambiguous, unsupported, conflicting, and disproven are different states.
+The system records what it received and extracts candidate information from it.
 
-A core rule is:
+**Question:** what did the source actually provide?
 
-> **Do not convert missing evidence into false certainty.**
+Observation should retain source and retrieval context. Extraction is a transformation and must not be confused with the original source material.
 
-Uncertainty should travel with derived information where practical so downstream systems can distinguish a well-supported claim from an unresolved one.
+## 3. Identification and canonical entities
 
-## Design principles
+Candidate records are matched to canonical entities and possible new entities.
 
-1. **Provenance first** — preserve where information came from.
-2. **Context matters** — authority and trust depend on the claim and environment.
-3. **Uncertainty is data** — unknown should not silently become true or false.
-4. **Evidence is inspectable** — derived signals should be traceable to inputs.
-5. **Identity is explicit** — expose ambiguity when entity resolution is uncertain.
-6. **Conflicts remain visible** — disagreement should not disappear behind a single value.
-7. **Machine-readable by design** — outputs should be structured for downstream systems.
+**Question:** what subject does this material refer to?
 
-## Public scope
+Identity resolution should support aliases, duplicate candidates, ambiguity and unresolved matches. A system should not silently merge distinct subjects merely to produce a clean graph.
 
-This document describes the public conceptual architecture. It intentionally excludes private deployment topology, internal infrastructure, private datasets, credentials, and unreleased implementation details.
+## 4. Semantics and relationships
+
+The system represents entity types, claims, attributes, typed relationships and context.
+
+**Question:** what does this information mean, and how is it connected?
+
+The ten knowledge trails are discovery surfaces, not a closed ontology. The semantic model must remain extensible as new subjects and relationships are encountered.
+
+## 5. Evidence and provenance
+
+Claims are connected to supporting, weakening, contradicting or contextualizing evidence. Provenance records origin and transformations.
+
+**Question:** what supports this claim, and how did it reach this representation?
+
+A derived value without a recoverable basis is weaker than one whose evidence and transformation history can be inspected.
+
+## 6. Reconciliation, authority and uncertainty
+
+Information from multiple sources is compared. Conflicts, stale data, missing evidence and ambiguous identity remain explicit. Source authority is considered in relation to the claim and context.
+
+**Question:** what agrees, what conflicts, what remains unknown, and which sources have standing for this question?
+
+KARADAVI does not assume disagreement should be averaged away or that one source is universally authoritative.
+
+## 7. Evaluation and editorial preparation
+
+Evidence and context can inform an evaluation and a draft or proposed update.
+
+**Question:** what can responsibly be presented to an editor?
+
+Evaluation is not publication approval. A machine-readable trust signal should expose its basis and limitations rather than hide reasoning inside a universal score.
+
+## 8. Human editorial approval and publication
+
+A human editor reviews the prepared material and explicitly approves, rejects or requests further work.
+
+**Question:** should this become published KARADAVI knowledge?
+
+> **AI never publishes.**
+
+This is a non-negotiable architectural invariant, including for autonomous discovery and update workflows.
+
+## 9. Continuous reconciliation
+
+Sources and the world change. The system can identify new material, possible corrections, missing relationships and stale claims, then prepare update proposals for editorial review.
+
+**Question:** what may have changed since the last approved revision?
+
+Continuous discovery does not authorize silent changes to published knowledge.
+
+## Ten knowledge trails
+
+The initial public discovery model uses People, Companies, Technology, Science, Space, Concepts, History, Places, Nature & Earth, and Society & Culture. These are navigation and discovery groupings over an extensible entity model, not ten separate knowledge silos.
+
+## Public/private boundary
+
+This document describes public concepts and research questions. It intentionally excludes private application code, internal services, database and deployment details, credentials, private datasets, operational tooling and unreleased implementation decisions. The public model should remain useful even when the private implementation changes.
