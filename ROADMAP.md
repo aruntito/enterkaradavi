@@ -7,7 +7,7 @@ The project has two connected surfaces:
 - **Product:** the public knowledge experience and its private production implementation.
 - **Public research:** this repository's open conceptual models, specifications, schemas, experiments and documentation.
 
-The public research layer does not mirror or publish the private product implementation.
+The canonical production application is maintained in the private repository [\`aruntito/karadavi\`](https://github.com/aruntito/karadavi). The public research layer does not mirror or publish that private product implementation.
 
 ## North star
 
