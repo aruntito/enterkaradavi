@@ -12,13 +12,11 @@
 
 # THE KNOWLEDGE FOREST
 
-**KARADAVI is a place for understanding the world through connected knowledge.**
+**KARADAVI is an open knowledge platform: a continuously evolving institution for exploring the world's knowledge as an interconnected whole.**
 
-People do not exist separately from the companies they build. Technologies do not appear without people, ideas, discoveries, places, and history around them. Scientific breakthroughs create consequences. Places shape cultures. Concepts travel across disciplines and generations.
+People, organizations, technologies, discoveries, places, events, ideas, natural systems and cultures do not exist in isolation. Their identities, histories, claims and relationships form a much larger picture.
 
-Most information systems break those connections into pages, search results, posts, and feeds.
-
-KARADAVI tries to preserve them.
+KARADAVI is being built to make that picture explorable.
 
 > **Every page is a starting point. Every connection leads somewhere.**
 
@@ -31,272 +29,201 @@ KARADAVI tries to preserve them.
 
 ---
 
-## WHY KARADAVI EXISTS
+## THE PROBLEM
 
-The internet gives us extraordinary access to information, but access is not the same as understanding.
+The internet has made information abundant, but abundance has not made knowledge coherent.
 
-A search result can answer a question without showing the larger context. An article can explain one subject without exposing its relationships. A feed can surface information without preserving why it matters.
+Information is distributed across publications, databases, archives, registries, research repositories and other independent sources. The same entity may appear under different names. Claims can conflict. Context gets lost when information is copied. Sources change, and once-useful facts become stale.
 
-KARADAVI begins with a different question:
+Search can find pages. A conventional article can explain one subject. Neither necessarily preserves the evidence, identity and relationships needed to understand how that subject fits into the wider world.
 
-**What if knowledge were explored as a connected forest rather than a collection of isolated pages?**
+KARADAVI's premise is that **knowledge should be represented as a connected, evidence-aware system—not merely accumulated as isolated pages.**
 
-A person can lead to a company.
+## THE KNOWLEDGE INSTITUTION
 
-A company can lead to a technology.
+KARADAVI's long-term mission is broad: to help people understand meaningful, identifiable knowledge across the world. That is a north star for an extensible institution, not a claim that every subject will be covered at launch.
 
-A technology can lead to a scientific idea.
+The platform is designed to:
 
-That idea can lead backward through history or outward into society, nature, places, and culture.
+- identify and represent entities consistently;
+- connect entities through meaningful, typed relationships;
+- distinguish observations, claims, evidence and interpretation;
+- preserve source attribution and transformation history;
+- represent conflicting, incomplete, ambiguous and stale information;
+- make knowledge readable to people and structured for software;
+- discover gaps and propose updates as the world changes.
 
-KARADAVI calls these paths **knowledge trails**.
+The goal is not a universal truth machine or an automatically generated encyclopedia. It is a maintained knowledge resource whose basis and limitations can be inspected.
 
----
+## TEN KNOWLEDGE TRAILS
 
-## HOW TO ENTER THE FOREST
+The initial discovery experience uses ten broad trails:
 
-KARADAVI organizes discovery around ten broad domains:
-
-| Domain | What you can encounter |
+| Trail | Scope |
 |:--|:--|
-| **People** | People whose work, ideas, decisions, or lives connect to the wider forest |
-| **Companies** | Organizations, businesses, institutions, and the ecosystems around them |
-| **Technology** | Technologies, systems, tools, platforms, and inventions |
-| **Science** | Discoveries, disciplines, theories, experiments, and scientific ideas |
-| **Space** | Missions, celestial objects, organizations, discoveries, and exploration |
-| **Concepts** | Ideas that connect subjects across disciplines |
-| **History** | Events, periods, movements, and the paths that produced the present |
-| **Places** | Countries, cities, regions, landmarks, and meaningful locations |
-| **Nature & Earth** | Species, ecosystems, geography, climate, and the natural world |
-| **Society & Culture** | Communities, traditions, institutions, media, language, and culture |
+| **People** | People, their work, ideas, decisions and lives |
+| **Companies** | Companies, institutions, organizations and ecosystems |
+| **Technology** | Technologies, systems, tools, platforms and inventions |
+| **Science** | Discoveries, disciplines, theories and experiments |
+| **Space** | Celestial objects, missions, exploration and discoveries |
+| **Concepts** | Ideas and concepts connecting disciplines |
+| **History** | Events, periods, movements and historical context |
+| **Places** | Countries, cities, regions and meaningful locations |
+| **Nature & Earth** | Species, ecosystems, geography, climate and natural systems |
+| **Society & Culture** | Communities, institutions, traditions, media and culture |
 
-These are entrances, not walls. The same trail can cross several domains.
+These trails are discovery surfaces, not the limits of the knowledge model. KARADAVI's underlying ontology must remain extensible enough to represent new entity types and relationships without forcing reality into ten fixed buckets.
 
----
+A trail can cross every other trail. A person can connect to a company, a technology, a place, a scientific idea and a historical event.
 
-## AN ENTITY IS A STARTING POINT
+## THE KNOWLEDGE MODEL
 
-A KARADAVI page represents an **entity**: something worth identifying and understanding as a distinct subject.
+KARADAVI is entity-centered and knowledge-graph-first. A page is one human-readable view of a deeper connected model.
 
-An entity may be a person, company, technology, place, scientific subject, historical event, concept, or something else represented in the forest.
-
-The page is not meant to be the end of the journey.
-
-It establishes identity and context, then exposes relationships that allow exploration to continue.
+At a conceptual level:
 
 ```text
-                       PERSON
-                     /        \
-                    v          v
-               COMPANY ---- TECHNOLOGY
-                  |              |
-                  v              v
-                PLACE <------ CONCEPT
-                  |              |
-                  v              v
-               HISTORY ------ SCIENCE
-                     \        /
-                      v      v
-                       WORLD
+Entity
+  ├── Claims
+  │     ├── Evidence
+  │     ├── Sources
+  │     ├── Provenance
+  │     ├── Authority / context
+  │     └── Uncertainty / conflicts
+  ├── Relationships ──> Other entities
+  ├── Explanations and representations
+  └── Revisions and history
 ```
 
-The graph matters because context often lives between things rather than inside a single page.
+An entity is not the same as a claim about it. A claim is not the same as its evidence. A source is not automatically authoritative for every question. A published representation is not proof that uncertainty has disappeared.
 
----
-
-## KNOWLEDGE SHOULD SHOW ITS ROOTS
-
-KARADAVI is built around a simple idea:
-
-**information becomes more useful when its basis remains inspectable.**
-
-That means keeping meaningful distinctions between:
-
-- an entity and a claim about that entity;
-- a claim and the evidence supporting it;
-- evidence and the source it came from;
-- a source and its authority in a particular context;
-- what is known and what remains uncertain;
-- what a machine proposes and what a human editor approves.
-
-The public research in this repository explores ways to represent those distinctions clearly for both people and software.
+These distinctions allow knowledge to be corrected and expanded without erasing how it was established.
 
 **[Explore the public knowledge model →](docs/knowledge-model.md)**
 
----
+## HOW KNOWLEDGE EVOLVES
 
-## CONNECTIONS, NOT SILOS
+KARADAVI is intended to be continuously maintained, not populated once and left untouched.
 
-KARADAVI treats relationships as first-class knowledge.
-
-```text
-Entity ── relationship ──> Entity
-  │                         │
-  ├── claims                ├── claims
-  ├── evidence              ├── evidence
-  └── context               └── context
-```
-
-Relationships can explain how subjects are connected:
-
-**founded by · developed by · located in · influenced by · discovered by · part of · preceded by · related to**
-
-A useful knowledge system should make those relationships traversable rather than burying them inside prose.
-
-**[Explore the Knowledge Forest →](docs/the-forest.md)**
-
----
-
-## EVIDENCE, PROVENANCE & UNCERTAINTY
-
-KARADAVI does not assume that every piece of information deserves the same treatment.
-
-Knowledge can be incomplete.
-
-Sources can disagree.
-
-Names can refer to multiple entities.
-
-Old information can become stale.
-
-A claim can be supported today and challenged by better evidence tomorrow.
-
-Instead of hiding those conditions, KARADAVI's public model explores how they can remain visible.
+Its conceptual lifecycle is:
 
 ```text
-SOURCE
-   ↓
-EVIDENCE
-   ↓
-CLAIM
-   ↓
-CONTEXT
-   ↓
-INTERPRETATION
+Discover sources and research leads
+              ↓
+      Retrieve / observe material
+              ↓
+       Extract and normalize
+              ↓
+     Resolve canonical identity
+              ↓
+  Build claims, evidence and provenance
+              ↓
+  Reconcile sources and surface conflicts
+              ↓
+      Prepare research / drafts
+              ↓
+       HUMAN EDITORIAL REVIEW
+              ↓
+          APPROVAL
+              ↓
+       Publish connected knowledge
+              ↓
+ Monitor change and propose updates
+              └───────────↺
 ```
 
-The goal is not to manufacture certainty.
+Research and automation can discover, extract, compare, normalize, classify, draft and propose updates. They cannot independently approve or publish.
 
-The goal is to make context inspectable.
+> **AI never publishes.**
 
----
+This is a permanent editorial invariant, not a temporary limitation. Human editors retain publication authority, including for autonomous discovery and update workflows.
 
-## AI ASSISTS. HUMANS PUBLISH.
+**[Read the editorial model →](docs/editorial-model.md)**
 
-KARADAVI uses a deliberately simple editorial boundary:
+## EVIDENCE, PROVENANCE AND TRUST
 
-> **Knowledge is automatic. Writing is intentional. Publishing is human.**
+KARADAVI aims to preserve the path from source material to published representation.
 
-AI and software can help organize information, identify possible relationships, structure material, and assist writing.
+It distinguishes:
 
-They do not receive publication authority.
+- **Identity:** what subject is being represented, including unresolved ambiguity;
+- **Claims:** what is being asserted and about whom or what;
+- **Evidence:** what supports, weakens or contextualizes a claim;
+- **Provenance:** where information came from and how it was transformed;
+- **Authority:** the standing a source has for a particular claim and context;
+- **Uncertainty:** what is unknown, incomplete, stale, disputed or contradicted;
+- **Evaluation:** how available evidence and context are interpreted.
 
-Human editorial judgment remains responsible for what KARADAVI presents as published knowledge.
+Sources can disagree. Claims can change. A knowledge system should preserve those conditions rather than silently flattening them into a confident-looking answer.
 
-This distinction is fundamental to the project, not a temporary technical limitation.
+## OPEN KNOWLEDGE, PUBLIC RESEARCH, PRIVATE IMPLEMENTATION
 
-**[Read the editorial principles →](docs/editorial-model.md)**
+KARADAVI is intended as an open knowledge platform: the public knowledge experience and appropriate research outputs are meant to be accessible and useful beyond the project itself.
 
----
+The public repository, [`aruntito/enterkaradavi`](https://github.com/aruntito/enterkaradavi), contains the public research and specification layer: conceptual models, research questions, experimental schemas, reference examples and documentation.
 
-## THE PUBLIC RESEARCH
+The canonical production application is maintained separately in the private repository, [`aruntito/karadavi`](https://github.com/aruntito/karadavi). Its production application code, private datasets, deployment configuration, internal infrastructure and operational tooling are not published in this repository.
 
-This repository is KARADAVI's **public research and specification project**. It publishes the concepts, research notes, experimental schemas, reference examples, and documentation that can be independently inspected and discussed.
+This distinction is deliberate. **Open access to knowledge does not require publishing every part of the software implementation.** The public research repository is MIT-licensed, but that licence does not apply to the separate private product repository.
 
-It is intentionally separate from the private KARADAVI product implementation. This repository does **not** publish the private product source code, private datasets, deployment configuration, internal infrastructure, or unreleased product work. The public/private boundary is documented in [docs/public-private-boundary.md](docs/public-private-boundary.md). The current state of this public research surface is tracked in [docs/project-status.md](docs/project-status.md), and its research questions are described in [docs/research-program.md](docs/research-program.md).
+See [the public/private boundary](docs/public-private-boundary.md) for the exact scope.
 
-It explores questions such as:
+## PUBLIC RESEARCH
 
-- How should connected knowledge be represented?
-- How can claims remain linked to evidence?
-- How should provenance survive transformations?
-- What happens when credible sources disagree?
-- How should uncertainty be represented without creating false precision?
-- How should ambiguous identities be handled?
-- What does authority mean when it depends on context?
-- How can knowledge remain understandable to humans while also being machine-readable?
+This repository makes the ideas behind KARADAVI inspectable and open to discussion. It explores:
 
-The work here is experimental. It is intended to expose ideas for inspection rather than declare unfinished research to be a standard.
+- extensible knowledge ontology and entity identity;
+- claim and relationship semantics;
+- evidence and provenance across transformations;
+- source authority in context;
+- uncertainty, contradiction and knowledge change;
+- entity resolution and reconciliation;
+- human editorial approval as part of knowledge provenance;
+- machine-readable representations and interoperability.
 
-**[Research notebook →](research/)** · **[Experimental specifications →](specs/)** · **[Reference examples →](examples/)**
+The schemas are experimental. They are not presented as finalized standards. Research should produce evidence, documented limitations, failed hypotheses or explicit specification decisions.
 
----
+**[Research program →](docs/research-program.md)** · **[Specifications →](specs/)** · **[Research notes →](research/)** · **[Examples →](examples/)**
 
-## WHAT THIS REPOSITORY CONTAINS
+## PROJECT MATURITY
 
-```text
-enterkaradavi/
-│
-├── README.md                 Start here
-├── docs/
-│   ├── about.md              What KARADAVI is and why it exists
-│   ├── the-forest.md         Domains, entities and knowledge trails
-│   ├── knowledge-model.md    Public model of connected knowledge
-│   ├── editorial-model.md    Human editorial authority
-│   ├── architecture.md       Conceptual architecture
-│   ├── terminology.md        Shared vocabulary
-│   ├── design-principles.md  Principles behind the model
-│   └── specification.md      Experimental public specification
-│
-├── research/                 Open research questions
-├── specs/                    Experimental machine-readable schemas
-├── examples/                 Synthetic reference examples
-└── assets/                   KARADAVI visual language
-```
+KARADAVI's vision is intentionally larger than its initial release. The public research repository tracks the maturity of its own models and experiments; it does not claim that the entire knowledge institution or all autonomous workflows are already complete.
 
-The repository explains the public ideas behind KARADAVI.
-
-It is not a source-code mirror of the product.
-
----
+The product roadmap distinguishes implemented foundations from work still being built and longer-term ambitions. See [project status](docs/project-status.md) and [roadmap](ROADMAP.md).
 
 ## PRINCIPLES
 
-**CONNECTED OVER ISOLATED**
+**CONNECTED KNOWLEDGE** — relationships are first-class, not decorative links.
 
-Knowledge gains meaning through relationships.
+**EXTENSIBLE ONTOLOGY** — trails help discovery; they do not constrain what can be represented.
 
-**PROVENANCE OVER OPAQUE ASSERTION**
+**EVIDENCE BEFORE ASSERTION** — important claims should retain inspectable support.
 
-Important information should retain enough context to understand where it came from.
+**PROVENANCE THROUGH TRANSFORMATION** — preserve where information came from and how it changed.
 
-**UNCERTAINTY OVER FALSE PRECISION**
+**UNCERTAINTY IS INFORMATION** — unknown, ambiguous, incomplete, stale and disputed are meaningful states.
 
-Unknown, ambiguous, disputed, and incomplete are meaningful states.
+**CONTEXTUAL AUTHORITY** — authority depends on the claim, domain, time and context.
 
-**CONTEXT OVER UNIVERSAL RANKINGS**
+**HUMAN PUBLICATION AUTHORITY** — AI can assist; humans approve publication.
 
-Authority and relevance depend on what is being established and why.
-
-**HUMAN PUBLICATION AUTHORITY**
-
-Automation can assist. Publication remains an editorial decision.
-
-**TRAILS OVER DEAD ENDS**
-
-A useful page should make the next meaningful connection discoverable.
+**CONTINUOUS STEWARDSHIP** — knowledge should be revisited as sources and the world change.
 
 ---
 
-## ORIGIN
+## REPOSITORY MAP
 
-The name **KARADAVI** comes from Telugu: **కారడవి**, a dense forest.
+```text
+enterkaradavi/
+├── README.md
+├── docs/       Public vision, models, architecture and editorial rules
+├── research/   Open research questions and investigations
+├── specs/      Experimental machine-readable schemas
+├── examples/   Synthetic reference examples
+└── assets/     KARADAVI visual identity
+```
 
-The project grew from the idea that knowledge behaves much like a forest: individual subjects matter, but the paths between them are what make the whole landscape understandable.
-
-KARADAVI's own origin has a longer story involving a Telugu textbook, a forest, a computer, a website, and a domain name that unexpectedly became the beginning of this project.
-
-**[Read the origin story →](docs/origin.md)**
-
----
-
-## STATUS
-
-KARADAVI is an evolving knowledge platform and an active public research project.
-
-The public schemas and terminology in this repository are experimental. They may change as the ideas are tested against harder examples and real knowledge problems.
-
-Nothing here should be interpreted as a finalized standard simply because it has a version number.
+This repository is the public research and specification companion to the private product. It is not a source-code mirror.
 
 ---
 
@@ -306,9 +233,9 @@ Nothing here should be interpreted as a finalized standard simply because it has
 
 ### KARADAVI
 
-**A quiet library for the internet.**
+**A knowledge forest for the world.**
 
-*Knowledge is automatic. Writing is intentional. Publishing is human.*
+*Every page is a starting point. Every connection leads somewhere.*
 
 <br />
 
